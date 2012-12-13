@@ -1,0 +1,8 @@
+<browsers>
+	<browser refID="Default">
+		<controlAdapters>
+			<adapter adapterType="Apple.Web.Admin.Adapters.HtmlFormControlAdapter, Apple.Web.Admin" 
+					 controlType="System.Web.UI.HtmlControls.HtmlForm" />
+		</controlAdapters>
+	</browser>
+</browsers>

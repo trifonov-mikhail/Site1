@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D61C029A-5BF7-4B16-95FB-B3E06AB9E8FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Erc.Apple.Data</RootNamespace>
+    <AssemblyName>Erc.Apple.Data</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="AdminPage.cs" />
+    <Compile Include="AdminPages.cs" />
+    <Compile Include="Admins.cs" />
+    <Compile Include="BussinesModels\Categories.cs" />
+    <Compile Include="BussinesModels\ContactForms.cs" />
+    <Compile Include="BussinesModels\ContentPages.cs" />
+    <Compile Include="BussinesModels\ContentSections.cs" />
+    <Compile Include="BussinesModels\CaseStudies.cs" />
+    <Compile Include="BussinesModels\DownloadFiles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BussinesModels\DownloadUserForms.cs" />
+    <Compile Include="BussinesModels\iPadActionSerials.cs" />
+    <Compile Include="Transfer\Seller.cs" />
+    <Compile Include="Transfer\iPadActionSerial.cs" />
+    <Compile Include="BussinesModels\SeminarRegistrations.cs" />
+    <Compile Include="BussinesModels\SuccessStories.cs" />
+    <Compile Include="BussinesModels\DbConfig.cs" />
+    <Compile Include="BussinesModels\HomePageBlocks.cs" />
+    <Compile Include="BussinesModels\SerialNumbers.cs" />
+    <Compile Include="BussinesModels\TranslatableFields.cs" />
+    <Compile Include="BussinesModels\LatestProducts.cs" />
+    <Compile Include="BussinesModels\DevelopersTools.cs" />
+    <Compile Include="BussinesModels\DevelopersLinks.cs" />
+    <Compile Include="BussinesModels\NewsSubscribers.cs" />
+    <Compile Include="BussinesModels\PagesHtml.cs" />
+    <Compile Include="BussinesModels\Stories.cs" />
+    <Compile Include="BussinesModels\Feedbacks.cs" />
+    <Compile Include="BussinesModels\Log.cs" />
+    <Compile Include="BussinesModels\News.cs" />
+    <Compile Include="BussinesModels\ServiceSpecializations.cs" />
+    <Compile Include="BussinesModels\Services.cs" />
+    <Compile Include="BussinesModels\ServiceStatuses.cs" />
+    <Compile Include="BussinesModels\StatusRequests.cs" />
+    <Compile Include="Cache\AdminPagesCache.cs" />
+    <Compile Include="Cache\ContactFormsCache.cs" />
+    <Compile Include="Cache\DbConfigCache.cs" />
+    <Compile Include="Cache\TranslatableTextsCache.cs.cs" />
+    <Compile Include="Cache\LanguagesCache.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="Models\Apple.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Apple.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppleDataContext.cs" />
+    <Compile Include="Models\SerialNumber.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\AdminRepository.cs" />
+    <Compile Include="Repositories\RepositoryBase.cs" />
+    <Compile Include="Repositories\SerialNumberRepository.cs" />
+    <Compile Include="SideBarConfig.cs" />
+    <Compile Include="SideBarItem.cs" />
+    <Compile Include="SitePagesConfig.cs" />
+    <Compile Include="TemplatedPage.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="Transfer\Category.cs" />
+    <Compile Include="Transfer\City.cs" />
+    <Compile Include="BussinesModels\Cities.cs" />
+    <Compile Include="Transfer\ContactForm.cs" />
+    <Compile Include="Transfer\ContentPage.cs" />
+    <Compile Include="Transfer\ContentSection.cs" />
+    <Compile Include="Transfer\CaseStudy.cs" />
+    <Compile Include="Transfer\DownloadFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transfer\DownloadUserForm.cs" />
+    <Compile Include="BussinesModels\Sellers.cs" />
+    <Compile Include="Transfer\SeminarRegistration.cs" />
+    <Compile Include="Transfer\SuccessStory.cs" />
+    <Compile Include="Transfer\DbConfigItem.cs" />
+    <Compile Include="Transfer\HomePageBlock.cs" />
+    <Compile Include="Transfer\SerialNumber.cs" />
+    <Compile Include="Transfer\TranslatableText.cs" />
+    <Compile Include="Transfer\LatestProduct.cs" />
+    <Compile Include="Transfer\DevelopersTool.cs" />
+    <Compile Include="Transfer\DevelopersLink.cs" />
+    <Compile Include="Transfer\NewsSubscriber.cs" />
+    <Compile Include="Transfer\PageHtml.cs" />
+    <Compile Include="Transfer\Story.cs" />
+    <Compile Include="Transfer\Feedback.cs" />
+    <Compile Include="Transfer\LogMessage.cs" />
+    <Compile Include="Transfer\NewsItem.cs" />
+    <Compile Include="Transfer\ServiceSpecialization.cs" />
+    <Compile Include="Transfer\Service.cs" />
+    <Compile Include="Transfer\ServiceStatus.cs" />
+    <Compile Include="Transfer\Language.cs" />
+    <Compile Include="Languages.cs" />
+    <Compile Include="Modules\StoredProcedure.cs" />
+    <Compile Include="NullableConverter.cs" />
+    <Compile Include="Transfer\Partner.cs" />
+    <Compile Include="BussinesModels\Partners.cs" />
+    <Compile Include="Transfer\PartnerSpecialization.cs" />
+    <Compile Include="BussinesModels\PartnerSpecializations.cs" />
+    <Compile Include="Transfer\Specialization.cs" />
+    <Compile Include="BussinesModels\Specializations.cs" />
+    <Compile Include="Transfer\PartnerStatus.cs" />
+    <Compile Include="BussinesModels\PartnerStatuses.cs" />
+    <Compile Include="Transfer\Product.cs" />
+    <Compile Include="BussinesModels\Products.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transfer\Region.cs" />
+    <Compile Include="BussinesModels\Regions.cs" />
+    <Compile Include="Transfer\StatusRequest.cs" />
+    <Compile Include="TranslatableField.cs" />
+    <Compile Include="XmlConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\Apple.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Apple.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Models\Apple.dbml.layout">
+      <DependentUpon>Apple.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

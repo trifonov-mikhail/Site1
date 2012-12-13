@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/ru/Default.aspx" title="Домашняя"  description="">
+		<siteMapNode url="~/ru/WhyMac.aspx" title="Почему Мак?"  description="">
+			<siteMapNode url="~/ru/Consumers.aspx" title="Домашние пользователи"  description=""/>
+			<siteMapNode url="~/ru/ErcProAudio.aspx" title="Аудио"  description=""/>
+			<siteMapNode url="~/ru/ErcProVideo.aspx" title="Видео"  description=""/>
+			<siteMapNode url="~/ru/ErcProPhoto.aspx" title="Фото"  description=""/>
+			<siteMapNode url="~/ru/SMB.aspx" title="Малый и средний бизнес"  description=""/>
+			<siteMapNode url="~/ru/SMB2.aspx" title="Малый и средний бизнес2"  description=""/>
+			<siteMapNode url="~/ru/Education.aspx" title="Образование"  description=""/>
+		</siteMapNode>
+		<siteMapNode url="~/ru/Products.aspx" title="Продукты"  description="" />
+        <siteMapNode url="~/ru/WhereToBuy.aspx" title="Где купить"  description="" />
+		<siteMapNode url="~/ru/ForPartners.aspx" title="Партнерам"  description="" />
+		<siteMapNode url="~/ru/Support.aspx" title="Поддержка"  description="">
+			<siteMapNode url="~/ru/ServiceCenters.aspx" title="Сервисные центры"  description=""/>
+		</siteMapNode>
+		<siteMapNode url="~/ru/ForDevelopers.aspx" title="Разработчикам"  description="" />
+		<siteMapNode url="~/ru/Feedback.aspx" title="Обратная связь"  description=""  />
+	</siteMapNode>
+</siteMap>

@@ -1,0 +1,2 @@
+ <asp:TextBox runat="server" Width="300px"></asp:TextBox>
+ <asp:TextBox SkinID="TextArea" runat="server" Width="300px" Height="100px"></asp:TextBox>

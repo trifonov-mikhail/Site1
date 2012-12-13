@@ -1,0 +1,7 @@
+<asp:GridView runat="server" AutoGenerateColumns="False" 
+    AllowPaging="True" PageSize="5" EmptyDataText="There are no data records to display."
+    CellPadding="2" ForeColor="#1A2A35" GridLines="None" Width="100%" CssClass="mylist">
+    <RowStyle CssClass="row" />
+    <AlternatingRowStyle CssClass="altrow" />
+    <PagerStyle CssClass="pager" />
+</asp:GridView>

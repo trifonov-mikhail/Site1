@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <PostUpgradeAddToSCC>;E:\Novades\Sources\Apple.DB\Erc.Apple.DB.dbproj;E:\Novades\Sources\Apple.DB\Connections.txt;E:\Novades\Sources\Apple.DB\Scripts\Post-Deployment\Script.PostDeployment.sql;E:\Novades\Sources\Apple.DB\Scripts\Pre-Deployment\Script.PreDeployment.sql</PostUpgradeAddToSCC>
+    <PreviousProjectVersion>4.0</PreviousProjectVersion>
+    <UpgradedFromDBP>True</UpgradedFromDBP>
+    <Name>dbpProjectName</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.0</ProjectVersion>
+    <ProjectGuid>{67cbc824-a49e-4e9b-a947-360f3dfe65c3}</ProjectGuid>
+    <DSP>Microsoft.Data.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>False</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchema</DefaultFileStructure>
+    <DeployToDatabaseAddToServerExplorer>True</DeployToDatabaseAddToServerExplorer>
+    <DeployToScript>True</DeployToScript>
+    <CatalogPropertiesFile>Properties\Database.sqlsettings</CatalogPropertiesFile>
+    <LoadSqlClrTypes>True</LoadSqlClrTypes>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\TeamData\Microsoft.Data.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Data Generation Plans" />
+    <Folder Include="Schema Comparisons" />
+    <Folder Include="Create Scripts\DownloadUserForms" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertiesFile Include="Properties\Database.sqlsettings">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqldeployment">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqlcmdvars">
+    </PropertiesFile>
+    <Build Include="Properties\Database.sqlpermissions">
+      <ModelBuilderType>Permissions</ModelBuilderType>
+    </Build>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql">
+      <SubType>Code</SubType>
+    </PreDeploy>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql">
+      <SubType>Code</SubType>
+    </PostDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Schema Objects" />
+    <Folder Include="Schema Objects\Schemas" />
+    <Folder Include="Schema Objects\Schemas\dbo" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Defaults" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Functions" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Rules" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Data Types" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Types CLR" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Table Types" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\XML Schema Collections" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker\Queues" />
+    <Folder Include="Schema Objects\Schemas\dbo\Synonyms" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Constraints" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Indexes" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Keys" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Triggers" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Statistics" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Indexes" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Triggers" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Statistics" />
+    <Folder Include="Schema Objects\Database Level Objects" />
+    <Folder Include="Schema Objects\Database Level Objects\Assemblies" />
+    <Folder Include="Schema Objects\Database Level Objects\Database Triggers" />
+    <Folder Include="Schema Objects\Database Level Objects\Security" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Schemas" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Users" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Certificates" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Asymmetric Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Master Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Signatures" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Symmetric Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Encryption Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Audit Specification" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Application Roles" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Database Roles" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Broker Priorities" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Contracts" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Event Notifications" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Message Types" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Remote Service Binding" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Routes" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Services" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Stoplists" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Filegroups" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Files" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Catalogs" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Functions" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Schemes" />
+    <Folder Include="Create Scripts" />
+    <Folder Include="Create Scripts\_NewsSubscribers" />
+    <Folder Include="Create Scripts\Articles" />
+    <Folder Include="Create Scripts\CaseStudies" />
+    <Folder Include="Create Scripts\ContentPages" />
+    <Folder Include="Create Scripts\ContentSections" />
+    <Folder Include="Create Scripts\DbConfig" />
+    <Folder Include="Create Scripts\DownloadFiles" />
+    <Folder Include="Create Scripts\FormContact" />
+    <Folder Include="Create Scripts\Log" />
+    <Folder Include="Create Scripts\News" />
+    <Folder Include="Create Scripts\PagesHtml" />
+    <Folder Include="Create Scripts\SeminarsRegistration" />
+    <Folder Include="Create Scripts\SerialNumbers" />
+    <Folder Include="Create Scripts\StatusRequests" />
+    <Folder Include="Create Scripts\Stories" />
+    <Folder Include="Create Scripts\SuccessStories" />
+    <Folder Include="Properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <NotInBuild Include="Connections.txt" />
+    <NotInBuild Include="Create Scripts\_NewsSubscribers\NewsSubscribers.sql" />
+    <NotInBuild Include="Create Scripts\_NewsSubscribers\NewsSubscribers_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\_NewsSubscribers\NewsSubscribers_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\_NewsSubscribers\NewsSubscribers_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\_NewsSubscribers\NewsSubscribers_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\_NewsSubscribers\NewsSubscribers_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\Articles\Articles.sql" />
+    <NotInBuild Include="Create Scripts\Articles\Articles_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\Articles\Articles_DeleteImageSP.sql" />
+    <NotInBuild Include="Create Scripts\Articles\Articles_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\Articles\Articles_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\Articles\Articles_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\Articles\Articles_UpdateImage.sql" />
+    <NotInBuild Include="Create Scripts\Articles\Articles_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\Articles\Articles_UpdateItemWithImageSP.sql" />
+    <NotInBuild Include="Create Scripts\CaseStudies\CaseStudies.sql" />
+    <NotInBuild Include="Create Scripts\CaseStudies\CaseStudies_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\CaseStudies\CaseStudies_DeleteImageSP.sql" />
+    <NotInBuild Include="Create Scripts\CaseStudies\CaseStudies_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\CaseStudies\CaseStudies_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\CaseStudies\CaseStudies_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\CaseStudies\CaseStudies_UpdateImage.sql" />
+    <NotInBuild Include="Create Scripts\CaseStudies\CaseStudies_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\CaseStudies\CaseStudies_UpdateItemWithImageSP.sql" />
+    <NotInBuild Include="Create Scripts\ContentPages\ContentPages.sql" />
+    <NotInBuild Include="Create Scripts\ContentPages\ContentPages_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\ContentPages\ContentPages_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\ContentPages\ContentPages_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\ContentPages\ContentPages_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\ContentPages\ContentPages_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\ContentSections\ContentSections.sql" />
+    <NotInBuild Include="Create Scripts\ContentSections\ContentSections_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\ContentSections\ContentSections_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\ContentSections\ContentSections_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\ContentSections\ContentSections_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\ContentSections\ContentSections_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\DbConfig\DbConfig.sql" />
+    <NotInBuild Include="Create Scripts\DbConfig\DbConfig_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\DbConfig\DbConfig_AddUpdate.sql" />
+    <NotInBuild Include="Create Scripts\DbConfig\DbConfig_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\DbConfig\DbConfig_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\DbConfig\DbConfig_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\DbConfig\DbConfig_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\DownloadFiles\DownloadFile_Add.sql" />
+    <NotInBuild Include="Create Scripts\DownloadFiles\DownloadFile_Update.sql" />
+    <NotInBuild Include="Create Scripts\DownloadFiles\DownloadFiles.sql" />
+    <NotInBuild Include="Create Scripts\DownloadFiles\DownloadFiles_GetAll.sql" />
+    <NotInBuild Include="Create Scripts\DownloadFiles\DownloadFiles_GetById.sql" />
+    <NotInBuild Include="Create Scripts\FormContact\ContactForms.sql" />
+    <NotInBuild Include="Create Scripts\FormContact\ContactForms_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\FormContact\ContactForms_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\FormContact\ContactForms_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\FormContact\ContactForms_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\FormContact\ContactForms_GetByNameSP.sql" />
+    <NotInBuild Include="Create Scripts\FormContact\ContactForms_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\Log\Log.sql" />
+    <NotInBuild Include="Create Scripts\Log\Log_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\Log\Log_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\Log\Log_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\Log\Log_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\Log\Log_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\News\News.sql" />
+    <NotInBuild Include="Create Scripts\News\News_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\News\News_DeleteGroupSP.sql" />
+    <NotInBuild Include="Create Scripts\News\News_DeleteImageSP.sql" />
+    <NotInBuild Include="Create Scripts\News\News_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\News\News_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\News\News_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\News\News_GetByLangGroup.sql" />
+    <NotInBuild Include="Create Scripts\News\News_UpdateImage.sql" />
+    <NotInBuild Include="Create Scripts\News\News_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\News\News_UpdateItemWithImageSP.sql" />
+    <NotInBuild Include="Create Scripts\PagesHtml\PagesHtml.sql" />
+    <NotInBuild Include="Create Scripts\PagesHtml\PagesHtml_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\PagesHtml\PagesHtml_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\PagesHtml\PagesHtml_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\PagesHtml\PagesHtml_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\PagesHtml\PagesHtml_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\SeminarsRegistration\SeminarsRegistration.sql" />
+    <NotInBuild Include="Create Scripts\SeminarsRegistration\SeminarsRegistration_AddItem.sql" />
+    <NotInBuild Include="Create Scripts\SeminarsRegistration\SeminarsRegistration_GetAll.sql" />
+    <NotInBuild Include="Create Scripts\SerialNumbers\SerialNumbers.sql" />
+    <NotInBuild Include="Create Scripts\SerialNumbers\SerialNumbers_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\SerialNumbers\SerialNumbers_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\SerialNumbers\SerialNumbers_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\SerialNumbers\SerialNumbers_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\SerialNumbers\SerialNumbers_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\StatusRequests\GetByStatus.sql" />
+    <NotInBuild Include="Create Scripts\StatusRequests\StatusRequests.sql" />
+    <NotInBuild Include="Create Scripts\StatusRequests\StatusRequests_AddItemSP.sql" />
+    <NotInBuild Include="Create Scripts\StatusRequests\StatusRequests_DeleteItemSP.sql" />
+    <NotInBuild Include="Create Scripts\StatusRequests\StatusRequests_GetAllSP.sql" />
+    <NotInBuild Include="Create Scripts\StatusRequests\StatusRequests_GetByIdSP.sql" />
+    <NotInBuild Include="Create Scripts\StatusRequests\StatusRequests_UpdateItemSP.sql" />
+    <NotInBuild Include="Create Scripts\Stories\Stories_DeletePdfFile.sql" />
+    <NotInBuild Include="Create Scripts\Stories\Stories_GetPdfFile.sql" />
+    <NotInBuild Include="Create Scripts\Stories\Stories_UpdatePdfFile.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\Create_SuccessStories.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\Sequences_add.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStories_AddItem.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStories_DeleteImage.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStories_DeletePdfFile.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStories_GetAll.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStories_GetByID.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStories_GetByLangGroup.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStories_GetImage.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStories_GetPdfFile.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStories_UpdateImage.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStories_UpdateItem.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStories_UpdatePdfFile.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccessStory_GetByLang.sql" />
+    <NotInBuild Include="Create Scripts\SuccessStories\SuccesStories_DeleteGroup.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <BuildContributorArgument Include="OutDir=$(OutDir)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Create Scripts\DownloadUserForms\DownloadUserForms.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+  </ItemGroup>
+</Project>

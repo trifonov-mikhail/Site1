@@ -1,0 +1,29 @@
+textarea
+{
+	overflow:auto;
+}
+
+.lang
+{
+	height:19px;
+}
+.lang a
+{
+	margin-left:5px;
+}
+
+.lang a.active
+{
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.gridview
+{
+	margin-left:50px;
+}
+
+.pager table td
+{
+	padding:5px;
+}

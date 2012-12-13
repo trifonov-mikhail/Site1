@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/ua/Default.aspx" title="Домашня"  description="">
+		<siteMapNode url="~/ua/WhyMac.aspx" title="Чому Мак?"  description="" />
+		<siteMapNode url="~/ua/Products.aspx" title="Продукти"  description="" />
+        <siteMapNode url="~/ua/WhereToBuy.aspx" title="Де купити"  description="" />
+		<siteMapNode url="~/ua/ForPartners.aspx" title="Партнерам"  description="" />
+		<siteMapNode url="~/ua/Support.aspx" title="Підтримка"  description="" />
+		<siteMapNode url="~/#" title="Розробникам"  description="" />
+		<siteMapNode url="~/ua/Feedback.aspx" title="Зворотний зв'язок"  description="" />
+	</siteMapNode>
+</siteMap>

@@ -1,0 +1,1226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69AFF095-64CA-4F68-B1DC-77B41F72FCAC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Apple.Web</RootNamespace>
+    <AssemblyName>Apple.Web</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\Library\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\Library\System.Web.Extensions.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\overlay-apple.css" />
+    <Content Include="css\standalone.css" />
+    <Content Include="DownloadFile.aspx" />
+    <Content Include="images\activation.jpg" />
+    <Content Include="images\calendar.gif" />
+    <Content Include="images\overlay\close.png" />
+    <Content Include="images\overlay\white.png" />
+    <Content Include="images\transparent.png" />
+    <Content Include="iPad_Action.aspx" />
+    <Content Include="js\jquery.base64.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="MailTemplates\request_iPadAction.htm" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\FormAdapter.cs" />
+    <Compile Include="Adapters\MenuAdapter.cs" />
+    <Compile Include="Adapters\WebControlAdapterExtender.cs" />
+    <Compile Include="App_GlobalResources\AppleRes.designer.cs">
+      <DependentUpon>AppleRes.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="App_GlobalResources\AppleRes.en-US.designer.cs">
+      <DependentUpon>AppleRes.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\AppleRes.uk-UA.designer.cs">
+      <DependentUpon>AppleRes.uk-UA.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Base\MasterBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AllSuccessStories.ascx.cs">
+      <DependentUpon>AllSuccessStories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AllSuccessStories.ascx.designer.cs">
+      <DependentUpon>AllSuccessStories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CheckSerialNumber.ascx.cs">
+      <DependentUpon>CheckSerialNumber.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CheckSerialNumber.ascx.designer.cs">
+      <DependentUpon>CheckSerialNumber.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HomePageBlocks.ascx.cs">
+      <DependentUpon>HomePageBlocks.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\HomePageBlocks.ascx.designer.cs">
+      <DependentUpon>HomePageBlocks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainOneNews.ascx.cs">
+      <DependentUpon>MainOneNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MainOneNews.ascx.designer.cs">
+      <DependentUpon>MainOneNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReadTemplateControl.ascx.cs">
+      <DependentUpon>ReadTemplateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ReadTemplateControl.ascx.designer.cs">
+      <DependentUpon>ReadTemplateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SeminarRegistrationControl.ascx.cs">
+      <DependentUpon>SeminarRegistrationControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SeminarRegistrationControl.ascx.designer.cs">
+      <DependentUpon>SeminarRegistrationControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadFile.aspx.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DownloadFile.aspx.designer.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iPad_Action.aspx.cs">
+      <DependentUpon>iPad_Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iPad_Action.aspx.designer.cs">
+      <DependentUpon>iPad_Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="support\DownloadFileForm.aspx.cs">
+      <DependentUpon>DownloadFileForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="support\DownloadFileForm.aspx.designer.cs">
+      <DependentUpon>DownloadFileForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsArchive.aspx.cs">
+      <DependentUpon>NewsArchive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsArchive.aspx.designer.cs">
+      <DependentUpon>NewsArchive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PartnersNews.aspx.cs">
+      <DependentUpon>PartnersNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PartnersNews.aspx.designer.cs">
+      <DependentUpon>PartnersNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AllNewsTitles.ascx.cs">
+      <DependentUpon>AllNewsTitles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AllNewsTitles.ascx.designer.cs">
+      <DependentUpon>AllNewsTitles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CaseStudiesList.ascx.cs">
+      <DependentUpon>CaseStudiesList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CaseStudiesList.ascx.designer.cs">
+      <DependentUpon>CaseStudiesList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LatestProductsList2.ascx.cs">
+      <DependentUpon>LatestProductsList2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LatestProductsList2.ascx.designer.cs">
+      <DependentUpon>LatestProductsList2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LatestProductsList.ascx.cs">
+      <DependentUpon>LatestProductsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LatestProductsList.ascx.designer.cs">
+      <DependentUpon>LatestProductsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DevelopersToolsList.ascx.cs">
+      <DependentUpon>DevelopersToolsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DevelopersToolsList.ascx.designer.cs">
+      <DependentUpon>DevelopersToolsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LastOneNews.ascx.cs">
+      <DependentUpon>LastOneNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LastOneNews.ascx.designer.cs">
+      <DependentUpon>LastOneNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TopNewsTitles.ascx.cs">
+      <DependentUpon>TopNewsTitles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TopNewsTitles.ascx.designer.cs">
+      <DependentUpon>TopNewsTitles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewsSubscribePopup.ascx.cs">
+      <DependentUpon>NewsSubscribePopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NewsSubscribePopup.ascx.designer.cs">
+      <DependentUpon>NewsSubscribePopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TopNewsList.ascx.cs">
+      <DependentUpon>TopNewsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TopNewsList.ascx.designer.cs">
+      <DependentUpon>TopNewsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CsItem.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomMenu.cs" />
+    <Compile Include="Controls\Default.ascx.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Default.ascx.designer.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Map.ascx.cs">
+      <DependentUpon>Map.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Map.ascx.designer.cs">
+      <DependentUpon>Map.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RequestStatusForm.ascx.cs">
+      <DependentUpon>RequestStatusForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RequestStatusForm.ascx.designer.cs">
+      <DependentUpon>RequestStatusForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServiceCenters.ascx.cs">
+      <DependentUpon>ServiceCenters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ServiceCenters.ascx.designer.cs">
+      <DependentUpon>ServiceCenters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HtmlCssInclude.cs" />
+    <Compile Include="Controls\HtmlJsInclude.cs" />
+    <Compile Include="Controls\LangSwitcher.ascx.cs">
+      <DependentUpon>LangSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LangSwitcher.ascx.designer.cs">
+      <DependentUpon>LangSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductCategory.ascx.cs">
+      <DependentUpon>ProductCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductCategory.ascx.designer.cs">
+      <DependentUpon>ProductCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductList.ascx.cs">
+      <DependentUpon>ProductList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductList.ascx.designer.cs">
+      <DependentUpon>ProductList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SideBarPanel.ascx.cs">
+      <DependentUpon>SideBarPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SideBarPanel.ascx.designer.cs">
+      <DependentUpon>SideBarPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StoriesList.ascx.cs">
+      <DependentUpon>StoriesList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StoriesList.ascx.designer.cs">
+      <DependentUpon>StoriesList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UnderDevelopmentMessage.ascx.cs">
+      <DependentUpon>UnderDevelopmentMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UnderDevelopmentMessage.ascx.designer.cs">
+      <DependentUpon>UnderDevelopmentMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UsefulResourcesForDevelopers.ascx.cs">
+      <DependentUpon>UsefulResourcesForDevelopers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UsefulResourcesForDevelopers.ascx.designer.cs">
+      <DependentUpon>UsefulResourcesForDevelopers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WhereToBuy.ascx.cs">
+      <DependentUpon>WhereToBuy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WhereToBuy.ascx.designer.cs">
+      <DependentUpon>WhereToBuy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Request_SN.aspx.cs">
+      <DependentUpon>Request_SN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request_SN.aspx.designer.cs">
+      <DependentUpon>Request_SN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMB-registration.aspx.cs">
+      <DependentUpon>SMB-registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMB-registration.aspx.designer.cs">
+      <DependentUpon>SMB-registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMB2.aspx.cs">
+      <DependentUpon>SMB2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMB2.aspx.designer.cs">
+      <DependentUpon>SMB2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consumers.aspx.cs">
+      <DependentUpon>Consumers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consumers.aspx.designer.cs">
+      <DependentUpon>Consumers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Education.aspx.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Education.aspx.designer.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interesting.aspx.cs">
+      <DependentUpon>Interesting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interesting.aspx.designer.cs">
+      <DependentUpon>Interesting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMB.aspx.cs">
+      <DependentUpon>SMB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMB.aspx.designer.cs">
+      <DependentUpon>SMB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErcProPhoto.aspx.cs">
+      <DependentUpon>ErcProPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErcProPhoto.aspx.designer.cs">
+      <DependentUpon>ErcProPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErcProVideo.aspx.cs">
+      <DependentUpon>ErcProVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErcProVideo.aspx.designer.cs">
+      <DependentUpon>ErcProVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErcProAudio.aspx.cs">
+      <DependentUpon>ErcProAudio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErcProAudio.aspx.designer.cs">
+      <DependentUpon>ErcProAudio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error404.aspx.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error404.aspx.designer.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Request_AASP.aspx.cs">
+      <DependentUpon>Request_AASP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request_AASP.aspx.designer.cs">
+      <DependentUpon>Request_AASP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Request_ACP.aspx.cs">
+      <DependentUpon>Request_ACP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request_ACP.aspx.designer.cs">
+      <DependentUpon>Request_ACP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetPDF.ashx.cs">
+      <DependentUpon>GetPDF.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Request_LAR.aspx.cs">
+      <DependentUpon>Request_LAR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request_LAR.aspx.designer.cs">
+      <DependentUpon>Request_LAR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Support.aspx.cs">
+      <DependentUpon>Support.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Support.aspx.designer.cs">
+      <DependentUpon>Support.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicPage.Master.cs">
+      <DependentUpon>DynamicPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicPage.Master.designer.cs">
+      <DependentUpon>DynamicPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicPage.aspx.cs">
+      <DependentUpon>DynamicPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicPage.aspx.designer.cs">
+      <DependentUpon>DynamicPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForDevelopers.aspx.cs">
+      <DependentUpon>ForDevelopers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForDevelopers.aspx.designer.cs">
+      <DependentUpon>ForDevelopers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForPartners.aspx.cs">
+      <DependentUpon>ForPartners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForPartners.aspx.designer.cs">
+      <DependentUpon>ForPartners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Modules\SendMailHelper.cs" />
+    <Compile Include="Products.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCenters.aspx.cs">
+      <DependentUpon>ServiceCenters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceCenters.aspx.designer.cs">
+      <DependentUpon>ServiceCenters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessStories.aspx.cs">
+      <DependentUpon>SuccessStories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuccessStories.aspx.designer.cs">
+      <DependentUpon>SuccessStories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="support\Localization.aspx.cs">
+      <DependentUpon>Localization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="support\Localization.aspx.designer.cs">
+      <DependentUpon>Localization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WhereToBuy.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>WhereToBuy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WhereToBuy.aspx.designer.cs">
+      <DependentUpon>WhereToBuy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WhyMac.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>WhyMac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WhyMac.aspx.designer.cs">
+      <DependentUpon>WhyMac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WS\SysService.asmx.cs">
+      <DependentUpon>SysService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Apple.Web.Log\Apple.Web.Log.csproj">
+      <Project>{B43A706B-F06C-4D6B-8A19-476F716C99D2}</Project>
+      <Name>Apple.Web.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Erc.Apple.Data\Erc.Apple.Data.csproj">
+      <Project>{D61C029A-5BF7-4B16-95FB-B3E06AB9E8FB}</Project>
+      <Name>Erc.Apple.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SiteMaps\ru.Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\LangSwitcher.ascx" />
+    <Content Include="Controls\ProductCategory.ascx" />
+    <Content Include="Controls\ProductList.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Main.Master" />
+    <Content Include="Products.aspx" />
+    <Content Include="WhereToBuy.aspx" />
+    <Content Include="WhyMac.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\ServiceCenters.ascx" />
+    <Content Include="Controls\WhereToBuy.ascx" />
+    <Content Include="ForDevelopers.aspx" />
+    <Content Include="ForPartners.aspx" />
+    <Content Include="GetImage.ashx" />
+    <Content Include="js\jquery-1.2.1.js" />
+    <Content Include="js\jquery.dimensions.js" />
+    <Content Include="js\jquery.mousewheel.min.js" />
+    <Content Include="ServiceCenters.aspx" />
+    <Content Include="WS\SysService.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\Menu.browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SiteMaps\ua.Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SiteMaps\en.Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\Form.browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\SitePages.config" />
+    <Content Include="DynamicPage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\SideBar.config" />
+    <Content Include="Controls\SideBarPanel.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\AppleRes.uk-UA.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AppleRes.uk-UA.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\AppleRes.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AppleRes.en-US.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\AppleRes.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AppleRes.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\App_LocalResources\ServiceCenters.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\App_LocalResources\ServiceCenters.ascx.uk-UA.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\App_LocalResources\WhereToBuy.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\css\my.css" />
+    <Content Include="App_Themes\Default\css\style2.css" />
+    <Content Include="App_Themes\Default\images\arrow_left.png" />
+    <Content Include="App_Themes\Default\images\arrow_right.png" />
+    <Content Include="App_Themes\Default\images\bg_formproduct.png" />
+    <Content Include="App_Themes\Default\images\bg_header.png" />
+    <Content Include="App_Themes\Default\images\bg_input.png" />
+    <Content Include="App_Themes\Default\images\bg_input2.png" />
+    <Content Include="App_Themes\Default\images\bg_menuOn.png" />
+    <Content Include="App_Themes\Default\images\bg_select.png" />
+    <Content Include="App_Themes\Default\images\bg_tabcen.png" />
+    <Content Include="App_Themes\Default\images\bg_tetarea1.png" />
+    <Content Include="App_Themes\Default\images\bg_topmenu.png" />
+    <Content Include="App_Themes\Default\images\bleft_066.gif" />
+    <Content Include="App_Themes\Default\images\bmid_066.gif" />
+    <Content Include="App_Themes\Default\images\bright_066.gif" />
+    <Content Include="App_Themes\Default\images\bullet.png" />
+    <Content Include="App_Themes\Default\images\buttom_faq.png" />
+    <Content Include="App_Themes\Default\images\buttom_send.png" />
+    <Content Include="App_Themes\Default\images\button_pokazat.png" />
+    <Content Include="App_Themes\Default\images\en_off.png" />
+    <Content Include="App_Themes\Default\images\erc.jpg" />
+    <Content Include="App_Themes\Default\images\homeuser.jpg" />
+    <Content Include="App_Themes\Default\images\icon_about.png" />
+    <Content Include="App_Themes\Default\images\icon_apple.png" />
+    <Content Include="App_Themes\Default\images\icon_erc.png" />
+    <Content Include="App_Themes\Default\images\icon_feedback.png" />
+    <Content Include="App_Themes\Default\images\icon_news.png" />
+    <Content Include="App_Themes\Default\images\img_applemonitor.jpg" />
+    <Content Include="App_Themes\Default\images\img_appletv.jpg" />
+    <Content Include="App_Themes\Default\images\img_keyboard.jpg" />
+    <Content Include="App_Themes\Default\images\img_mac.jpg" />
+    <Content Include="App_Themes\Default\images\img_macbook_.jpg" />
+    <Content Include="App_Themes\Default\images\img_macbook_air.jpg" />
+    <Content Include="App_Themes\Default\images\img_macbook_mini.jpg" />
+    <Content Include="App_Themes\Default\images\img_macbook_pro.jpg" />
+    <Content Include="App_Themes\Default\images\img_macpro.jpg" />
+    <Content Include="App_Themes\Default\images\img_mouse.jpg" />
+    <Content Include="App_Themes\Default\images\interesno.jpg" />
+    <Content Include="App_Themes\Default\images\item_active.gif" />
+    <Content Include="App_Themes\Default\images\item_active1.gif" />
+    <Content Include="App_Themes\Default\images\item_active5.gif" />
+    <Content Include="App_Themes\Default\images\logotype.png" />
+    <Content Include="App_Themes\Default\images\main.jpg" />
+    <Content Include="App_Themes\Default\images\map.png" />
+    <Content Include="App_Themes\Default\images\menuOn_gde_kupit.png" />
+    <Content Include="App_Themes\Default\images\menuOn_partneram.png" />
+    <Content Include="App_Themes\Default\images\menuOn_pochemumac.png" />
+    <Content Include="App_Themes\Default\images\menuOn_products.png" />
+    <Content Include="App_Themes\Default\images\menuOn_razrabotchikam.png" />
+    <Content Include="App_Themes\Default\images\menuOn_servisec.png" />
+    <Content Include="App_Themes\Default\images\menu_1.png" />
+    <Content Include="App_Themes\Default\images\menu_2.png" />
+    <Content Include="App_Themes\Default\images\menu_bg_general.png" />
+    <Content Include="App_Themes\Default\images\menu_bg_hover.gif" />
+    <Content Include="App_Themes\Default\images\menu_bg_hover.png" />
+    <Content Include="App_Themes\Default\images\menu_gde_kupit.png" />
+    <Content Include="App_Themes\Default\images\menu_partneram.png" />
+    <Content Include="App_Themes\Default\images\menu_pochemumac.png" />
+    <Content Include="App_Themes\Default\images\menu_products.png" />
+    <Content Include="App_Themes\Default\images\menu_razrabotchikam.png" />
+    <Content Include="App_Themes\Default\images\menu_servisec.png" />
+    <Content Include="App_Themes\Default\images\obrasovanie.jpg" />
+    <Content Include="App_Themes\Default\images\professonal.jpg" />
+    <Content Include="App_Themes\Default\images\ru_off.png" />
+    <Content Include="App_Themes\Default\images\ru_on.png" />
+    <Content Include="App_Themes\Default\images\space.png" />
+    <Content Include="App_Themes\Default\images\tab_left.png" />
+    <Content Include="App_Themes\Default\images\tab_right.png" />
+    <Content Include="App_Themes\Default\images\trennings.jpg" />
+    <Content Include="App_Themes\Default\images\u1.png" />
+    <Content Include="App_Themes\Default\images\u2.png" />
+    <Content Include="App_Themes\Default\images\u3.png" />
+    <Content Include="App_Themes\Default\images\u4.png" />
+    <Content Include="App_Themes\Default\images\ua_off.png" />
+    <Content Include="App_Themes\Default\images\ua_on.png" />
+    <Content Include="App_Themes\Default\images\ub1.png" />
+    <Content Include="App_Themes\Default\images\ub2.png" />
+    <Content Include="App_Themes\Default\images\ub3.png" />
+    <Content Include="App_Themes\Default\images\ub4.png" />
+    <Content Include="App_Themes\Default\images\ubbottom.png" />
+    <Content Include="App_Themes\Default\images\ubleft.png" />
+    <Content Include="App_Themes\Default\images\ubright.png" />
+    <Content Include="App_Themes\Default\images\ubtop.png" />
+    <Content Include="App_Themes\Default\images\ug1.png" />
+    <Content Include="App_Themes\Default\images\ug2.png" />
+    <Content Include="App_Themes\Default\images\ug3.png" />
+    <Content Include="App_Themes\Default\images\ug4.png" />
+    <Content Include="App_Themes\Default\images\ugol_left.png" />
+    <Content Include="App_Themes\Default\images\ugol_right.png" />
+    <Content Include="App_Themes\Default\images\Untitled-6.gif" />
+    <Content Include="Controls\App_LocalResources\WhereToBuy.ascx.uk-UA.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Controls\Default.ascx" />
+    <Content Include="css\Products.css" />
+    <Content Include="Feedback.aspx" />
+    <Content Include="images\1px.gif" />
+    <Content Include="images\apple_certificate.jpg" />
+    <Content Include="images\arrow_left.png" />
+    <Content Include="images\arrow_right.png" />
+    <Content Include="images\AuthorisedCollectionPoint.gif" />
+    <Content Include="images\AuthorisedServiceProvider.gif" />
+    <Content Include="images\bg_copyright.jpg" />
+    <Content Include="images\bg_formproduct.png" />
+    <Content Include="images\bg_forpartners.jpg" />
+    <Content Include="images\bg_header.png" />
+    <Content Include="images\bg_input.png" />
+    <Content Include="images\bg_input2.png" />
+    <Content Include="images\bg_input_wide.png" />
+    <Content Include="images\bg_menuOn.png" />
+    <Content Include="images\bg_select.png" />
+    <Content Include="images\bg_tabcen.png" />
+    <Content Include="images\bg_tetarea1.png" />
+    <Content Include="images\bg_topmenu.png" />
+    <Content Include="images\bleft_066.gif" />
+    <Content Include="images\bmid_066.gif" />
+    <Content Include="images\bright_066.gif" />
+    <Content Include="images\btn_getAppleAuthStatus_ru.png" />
+    <Content Include="images\bullet.png" />
+    <Content Include="images\buttom_faq.png" />
+    <Content Include="images\buttom_send.png" />
+    <Content Include="images\buttom_send_request_RU.png" />
+    <Content Include="images\button_pokazat.png" />
+    <Content Include="images\contentmenu_separator.gif" />
+    <Content Include="images\en_off.png" />
+    <Content Include="images\erc.jpg" />
+    <Content Include="images\fade-left.png" />
+    <Content Include="images\fade-right.png" />
+    <Content Include="images\homeuser.jpg" />
+    <Content Include="images\icon_about.png" />
+    <Content Include="images\icon_apple.png" />
+    <Content Include="images\icon_b2b.png" />
+    <Content Include="images\icon_change_repair.png" />
+    <Content Include="images\icon_copyright.png" />
+    <Content Include="images\icon_differentiate.png" />
+    <Content Include="images\icon_erc.png" />
+    <Content Include="images\icon_feedback.png" />
+    <Content Include="images\icon_news.png" />
+    <Content Include="images\icon_noteOne.jpg" />
+    <Content Include="images\icon_noteTwo.jpg" />
+    <Content Include="images\icon_online_resources.png" />
+    <Content Include="images\icon_programms.png" />
+    <Content Include="images\icon_remont.png" />
+    <Content Include="images\icon_repair.png" />
+    <Content Include="images\icon_whitegrey.png" />
+    <Content Include="images\img_applemonitor.jpg" />
+    <Content Include="images\img_appletv.jpg" />
+    <Content Include="images\img_keyboard.jpg" />
+    <Content Include="images\img_mac.jpg" />
+    <Content Include="images\img_macbook_.jpg" />
+    <Content Include="images\img_macbook_air.jpg" />
+    <Content Include="images\img_macbook_mini.jpg" />
+    <Content Include="images\img_macbook_pro.jpg" />
+    <Content Include="images\img_macpro.jpg" />
+    <Content Include="images\img_mouse.jpg" />
+    <Content Include="images\interesno.jpg" />
+    <Content Include="images\item_active.gif" />
+    <Content Include="images\item_active1.gif" />
+    <Content Include="images\item_active5.gif" />
+    <Content Include="images\loading64.gif" />
+    <Content Include="images\logotype.png" />
+    <Content Include="images\main.jpg" />
+    <Content Include="images\map.png" />
+    <Content Include="images\menuOn_gde_kupit.png" />
+    <Content Include="images\menuOn_partneram.png" />
+    <Content Include="images\menuOn_pochemumac.png" />
+    <Content Include="images\menuOn_products.png" />
+    <Content Include="images\menuOn_razrabotchikam.png" />
+    <Content Include="images\menuOn_servisec.png" />
+    <Content Include="images\menu_1.png" />
+    <Content Include="images\menu_2.png" />
+    <Content Include="images\menu_bg_general.png" />
+    <Content Include="images\menu_bg_hover.gif" />
+    <Content Include="images\menu_bg_hover.png" />
+    <Content Include="images\menu_gde_kupit.png" />
+    <Content Include="images\menu_partneram.png" />
+    <Content Include="images\menu_pochemumac.png" />
+    <Content Include="images\menu_products.png" />
+    <Content Include="images\menu_razrabotchikam.png" />
+    <Content Include="images\menu_servisec.png" />
+    <Content Include="images\obrasovanie.jpg" />
+    <Content Include="images\professonal.jpg" />
+    <Content Include="images\ru_off.png" />
+    <Content Include="images\ru_on.png" />
+    <Content Include="images\slider-bg.gif" />
+    <Content Include="images\slider-left2.gif" />
+    <Content Include="images\slider-right2.gif" />
+    <Content Include="images\slider.gif" />
+    <Content Include="images\space.png" />
+    <Content Include="images\tab_left.png" />
+    <Content Include="images\tab_right.png" />
+    <Content Include="images\trennings.jpg" />
+    <Content Include="images\u1.png" />
+    <Content Include="images\u2.png" />
+    <Content Include="images\u3.png" />
+    <Content Include="images\u4.png" />
+    <Content Include="images\ua_off.png" />
+    <Content Include="images\ua_on.png" />
+    <Content Include="images\ub1.png" />
+    <Content Include="images\ub2.png" />
+    <Content Include="images\ub3.png" />
+    <Content Include="images\ub4.png" />
+    <Content Include="images\ubbottom.png" />
+    <Content Include="images\ubleft.png" />
+    <Content Include="images\ubright.png" />
+    <Content Include="images\ubtop.png" />
+    <Content Include="images\ug1.png" />
+    <Content Include="images\ug2.png" />
+    <Content Include="images\ug3.png" />
+    <Content Include="images\ug4.png" />
+    <Content Include="images\ugol_left.png" />
+    <Content Include="images\ugol_right.png" />
+    <Content Include="images\Untitled-6.gif" />
+    <Content Include="js\jquery-1.3.2.min.js" />
+    <Content Include="Templates\aboutus.ru.htm" />
+    <Content Include="Templates\aboutus.ua.htm" />
+    <Content Include="Templates\Certificate.ru.htm" />
+    <Content Include="Templates\Certificate.ua.htm" />
+    <Content Include="Templates\Advantages.ru.htm" />
+    <Content Include="Templates\Advantages.ua.htm" />
+    <Content Include="Templates\AASP.ru.htm" />
+    <Content Include="Templates\AASP.ua.htm" />
+    <Content Include="Templates\trademark.ru.htm" />
+    <Content Include="Templates\trademark.ua.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\images\bg_block.gif" />
+    <Content Include="App_Themes\Default\images\bg_block_bottom.gif" />
+    <Content Include="App_Themes\Default\images\bg_copyright.jpg" />
+    <Content Include="App_Themes\Default\images\bg_formproduct2.png" />
+    <Content Include="App_Themes\Default\images\bg_forpartners.jpg" />
+    <Content Include="App_Themes\Default\images\bg_howpage.jpg" />
+    <Content Include="App_Themes\Default\images\icon_programms.png" />
+    <Content Include="App_Themes\Default\images\icon_remont.png" />
+    <Content Include="App_Themes\Default\images\icon_whitegrey.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="App_Themes\Default\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="App_Themes\Default\smoothness\jquery-ui-1.7.2.custom.css" />
+    <Content Include="Controls\UnderDevelopmentMessage.ascx" />
+    <Content Include="Support.aspx" />
+    <Content Include="DynamicPage.Master" />
+    <Content Include="images\banners_img.jpg" />
+    <Content Include="images\banners_img2.jpg" />
+    <Content Include="images\bg_block.gif" />
+    <Content Include="images\bg_block_top.gif" />
+    <Content Include="images\bg_input_wide.jpg" />
+    <Content Include="images\btn_getLimitedAuthStatus_ru.png" />
+    <Content Include="images\contentmenu_separator2.gif" />
+    <Content Include="images\developwithApple.jpg" />
+    <Content Include="images\developwithApple_img1.jpg" />
+    <Content Include="images\developwithApple_img2.jpg" />
+    <Content Include="images\developwithApple_img3.jpg" />
+    <Content Include="images\developwithApple_img4.jpg" />
+    <Content Include="images\icon_apple2.png" />
+    <Content Include="images\icon_erc2.png" />
+    <Content Include="images\iStore.jpg" />
+    <Content Include="images\menu_bg_general_1.jpg" />
+    <Content Include="images\menu_bg_general_2.jpg" />
+    <Content Include="images\mHouse.jpg" />
+    <Content Include="images\support_img1.jpg" />
+    <Content Include="images\support_img2.jpg" />
+    <Content Include="images\warrantytalon.gif" />
+    <Content Include="images\warranty_img1.jpg" />
+    <Content Include="images\warranty_img2.jpg" />
+    <Content Include="images\warranty_img3.jpg" />
+    <Content Include="images\warranty_img4.jpg" />
+    <Content Include="images\whymac_img1.jpg" />
+    <Content Include="images\whymac_img2.jpg" />
+    <Content Include="images\whymac_img3.jpg" />
+    <Content Include="images\whymac_img4.jpg" />
+    <Content Include="images\whymac_img5.jpg" />
+    <Content Include="images\whymac_img6.jpg" />
+    <Content Include="js\jquery-ui-1.7.2.custom.min.js" />
+    <Content Include="Templates\Warranty.ru.htm" />
+    <Content Include="Templates\Support.ru.htm" />
+    <Content Include="Templates\HowCan.ru.htm" />
+    <Content Include="Templates\HowCan.ua.htm" />
+    <Content Include="Templates\DevelopWithApple.ru.htm" />
+    <Content Include="Templates\DevelopWithApple.ua.htm" />
+    <Content Include="Templates\WhoIs.ua.htm" />
+    <Content Include="Templates\WhoIs.ru.htm" />
+    <Content Include="Templates\WhyMac.ru.htm" />
+    <Content Include="Templates\WhyMac.ua.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\images\bg_input_wide.png" />
+    <Content Include="App_Themes\Default\images\languages_bg.png" />
+    <Content Include="Controls\RequestStatusForm.ascx" />
+    <Content Include="Error404.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="images\AuthorisedDis_logo.png" />
+    <Content Include="images\AuthorisedReseller.gif" />
+    <Content Include="images\AuthorizedTrainingCenter.gif" />
+    <Content Include="images\bullet.gif" />
+    <Content Include="images\developwithApple.png" />
+    <Content Include="images\ERC_logo.png" />
+    <Content Include="images\LimitedAuthorisedReseller.gif" />
+    <Content Include="images\NonAuthorisedReseller.gif" />
+    <Content Include="images\pixel.gif" />
+    <Content Include="images\PremiumReseller.gif" />
+    <Content Include="images\SolutionExpert.gif" />
+    <Content Include="images\whymacimg3.jpg" />
+    <Content Include="js\jquery.ifixpng.js" />
+    <Content Include="Request_AASP.aspx" />
+    <Content Include="Request_ACP.aspx" />
+    <Content Include="GetPDF.ashx" />
+    <Content Include="MailTemplates\StatusRequest.htm" />
+    <Content Include="MailTemplates\Feedback.htm" />
+    <Content Include="Request_LAR.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\images\bg_button.png" />
+    <Content Include="App_Themes\Default\images\bg_interesno.jpg" />
+    <Content Include="App_Themes\Default\images\bg_button_long.png" />
+    <Content Include="App_Themes\Default\images\bg_pnews.jpg" />
+    <Content Include="Controls\AllSuccessStories.ascx" />
+    <Content Include="Controls\CheckSerialNumber.ascx" />
+    <Content Include="Controls\HomePageBlocks.ascx" />
+    <Content Include="Controls\MainOneNews.ascx" />
+    <Content Include="Controls\ReadTemplateControl.ascx" />
+    <Content Include="Controls\SeminarRegistrationControl.ascx" />
+    <Content Include="support\DownloadFileForm.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="images\bg_block3.gif" />
+    <Content Include="images\btn_getAuthCPointStatus_ru.png" />
+    <Content Include="images\bytton_viberete.png" />
+    <Content Include="images\cons1.jpg" />
+    <Content Include="images\cons2.jpg" />
+    <Content Include="images\cons3.jpg" />
+    <Content Include="images\cons4.jpg" />
+    <Content Include="images\divide_line.gif" />
+    <Content Include="images\head_image_01.jpg" />
+    <Content Include="images\head_image_02.jpg" />
+    <Content Include="images\head_image_03.jpg" />
+    <Content Include="images\head_image_04.jpg" />
+    <Content Include="images\home_1.jpeg" />
+    <Content Include="images\home_2.jpeg" />
+    <Content Include="images\home_3.jpeg" />
+    <Content Include="images\home_4.jpeg" />
+    <Content Include="images\home_5.jpeg" />
+    <Content Include="images\icondiploma.png" />
+    <Content Include="images\iconimportant.png" />
+    <Content Include="images\iconPDF.gif" />
+    <Content Include="images\iconPDF.png" />
+    <Content Include="images\icon_important.png" />
+    <Content Include="images\icon_percent.png" />
+    <Content Include="images\icon_persent.png" />
+    <Content Include="images\icon_sn.jpg" />
+    <Content Include="images\imgarant1.jpg" />
+    <Content Include="images\imgarant2.jpg" />
+    <Content Include="images\imgarant3.jpg" />
+    <Content Include="images\iPodClassic.jpg" />
+    <Content Include="images\iPodNano.jpg" />
+    <Content Include="images\iPodSchuffle.jpg" />
+    <Content Include="images\iPodtouch.jpg" />
+    <Content Include="images\iPodtouch32.jpg" />
+    <Content Include="images\iPodtouch8.jpg" />
+    <Content Include="images\keyoard1.jpg" />
+    <Content Include="images\keyoard2.jpg" />
+    <Content Include="images\logo_compreview.jpg" />
+    <Content Include="images\logo_compreview.png" />
+    <Content Include="images\logo_delo.png" />
+    <Content Include="images\logo_erc.png" />
+    <Content Include="images\logo_hansaworld.png" />
+    <Content Include="images\logo_iland.png" />
+    <Content Include="images\logo_innoware.png" />
+    <Content Include="images\logo_investgazeta.png" />
+    <Content Include="images\logo_mmr.png" />
+    <Content Include="images\macbook_learning_shot.jpg" />
+    <Content Include="images\mac_screenshot_01.jpg" />
+    <Content Include="images\mac_screenshot_02.jpg" />
+    <Content Include="images\mac_screenshot_03.jpg" />
+    <Content Include="images\mac_screenshot_04.jpg" />
+    <Content Include="images\mac_screenshot_05.jpg" />
+    <Content Include="images\main_consumer.jpg" />
+    <Content Include="images\main_product_shot.jpg" />
+    <Content Include="images\menu_back.png" />
+    <Content Include="images\num1.png" />
+    <Content Include="images\num2.png" />
+    <Content Include="images\num3.png" />
+    <Content Include="images\num4.png" />
+    <Content Include="images\page_back.png" />
+    <Content Include="images\product_shot.jpg" />
+    <Content Include="images\register button.jpg" />
+    <Content Include="images\shtrih1.jpg" />
+    <Content Include="images\shtrih2.jpg" />
+    <Content Include="images\sn.jpg" />
+    <Content Include="images\test.jpeg" />
+    <Content Include="images\title_1.png" />
+    <Content Include="images\title_2.png" />
+    <Content Include="images\title_2n.png" />
+    <Content Include="images\title_2n_new.png" />
+    <Content Include="images\title_3.png" />
+    <Content Include="images\title_4.png" />
+    <Content Include="images\warrantytalon.png" />
+    <Content Include="images\width1.png" />
+    <Content Include="js\jquery.cross-slide.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.preloadImages.js" />
+    <Content Include="js\jScrollHorizontalPane.js" />
+    <Content Include="MailTemplates\SeminarRegistration.htm" />
+    <Content Include="NewsArchive.aspx" />
+    <Content Include="images\classi_buduchego.jpg" />
+    <Content Include="images\classi_buduchego2.jpg" />
+    <Content Include="images\edu1.jpg" />
+    <Content Include="images\edu2.jpg" />
+    <Content Include="images\edu3.jpg" />
+    <Content Include="images\IDD_home_2_5_Products_translate.jpg" />
+    <Content Include="images\main_education.jpg" />
+    <Content Include="images\main_education2.jpg" />
+    <Content Include="images\map_13.png" />
+    <Content Include="images\map_14.png" />
+    <Content Include="images\map_15.png" />
+    <Content Include="images\map_16.png" />
+    <Content Include="images\map_17.png" />
+    <Content Include="images\map_18.png" />
+    <Content Include="images\map_19.png" />
+    <Content Include="images\map_2.png" />
+    <Content Include="images\map_20.png" />
+    <Content Include="images\map_21.png" />
+    <Content Include="images\map_22.png" />
+    <Content Include="images\map_23.png" />
+    <Content Include="images\map_24.png" />
+    <Content Include="images\map_25.png" />
+    <Content Include="images\map_26.png" />
+    <Content Include="images\map_27.png" />
+    <Content Include="images\map_5.png" />
+    <Content Include="images\map_6.png" />
+    <Content Include="images\map_7.png" />
+    <Content Include="images\map_8.png" />
+    <Content Include="images\map_9.png" />
+    <Content Include="images\SMB1.jpg" />
+    <Content Include="images\SMB2.jpg" />
+    <Content Include="images\solution-exp.png" />
+    <Content Include="images\tr1.jpg" />
+    <Content Include="images\tr2.jpg" />
+    <Content Include="images\tr3.jpg" />
+    <Content Include="images\tr4.jpg" />
+    <Content Include="images\tr5.jpg" />
+    <Content Include="images\tr6.jpg" />
+    <Content Include="images\tr7.jpg" />
+    <Content Include="images\tr8.jpg" />
+    <Content Include="images\tr9.jpg" />
+    <Content Include="PartnersNews.aspx" />
+    <Content Include="Controls\AllNewsTitles.ascx" />
+    <Content Include="Controls\CaseStudiesList.ascx" />
+    <Content Include="Controls\LatestProductsList2.ascx" />
+    <Content Include="Controls\LatestProductsList.ascx" />
+    <Content Include="Controls\DevelopersToolsList.ascx" />
+    <Content Include="Controls\LastOneNews.ascx" />
+    <Content Include="Controls\TopNewsTitles.ascx" />
+    <Content Include="Controls\NewsSubscribePopup.ascx" />
+    <Content Include="Controls\TopNewsList.ascx" />
+    <Content Include="Controls\CsItemImageRight.ascx" />
+    <Content Include="Controls\CsItemImageLeft.ascx" />
+    <Content Include="Controls\Map.ascx" />
+    <Content Include="Controls\StoriesList.ascx" />
+    <Content Include="css\CustomAccordion.css" />
+    <Content Include="images\authorisedTcenter.jpg" />
+    <Content Include="images\expert.jpg" />
+    <Content Include="images\freedeminars.jpg" />
+    <Content Include="images\kariera.jpg" />
+    <Content Include="images\map_10.png" />
+    <Content Include="images\remont.jpg" />
+    <Content Include="images\ucheniki.jpg" />
+    <Content Include="News.aspx" />
+    <Content Include="Controls\UsefulResourcesForDevelopers.ascx" />
+    <Content Include="images\news-subs.png" />
+    <Content Include="images\news.jpg" />
+    <Content Include="images\tf-bg.png" />
+    <Content Include="Request_SN.aspx" />
+    <Content Include="SBSeminar.aspx" />
+    <Content Include="SMB-registration.aspx" />
+    <Content Include="SMB2.aspx" />
+    <Content Include="css\CustomPopup.css" />
+    <Content Include="Consumers.aspx" />
+    <Content Include="Education.aspx" />
+    <Content Include="images\close.png" />
+    <Content Include="images\form-bg.png" />
+    <Content Include="images\int_macbook.jpg" />
+    <Content Include="images\int_macmini.jpg" />
+    <Content Include="images\int_macos.jpg" />
+    <Content Include="images\int_magicmouse.jpg" />
+    <Content Include="Interesting.aspx" />
+    <Content Include="SMB.aspx" />
+    <Content Include="ErcProPhoto.aspx" />
+    <Content Include="ErcProVideo.aspx" />
+    <Content Include="ErcProAudio.aspx" />
+    <Content Include="files\Accessory.pdf" />
+    <Content Include="files\CPU.pdf" />
+    <Content Include="files\iPod_and_iSight.pdf" />
+    <Content Include="files\Sparepart.pdf" />
+    <Content Include="images\map_11.png" />
+    <Content Include="images\map_3.png" />
+    <Content Include="images\map_4.png" />
+    <Content Include="js\jquery.selectboxes.min.js" />
+    <Content Include="SMBseminar.aspx" />
+    <Content Include="support\Localization.aspx" />
+    <Content Include="Templates\backtoschool.ru.htm" />
+    <Content Include="Templates\backtoschool.ua.htm" />
+    <Content Include="Templates\backtoscool.ru.htm" />
+    <Content Include="Templates\Consumers.ru.htm" />
+    <Content Include="Templates\Consumers.ua.htm" />
+    <Content Include="Templates\Education.ua.htm" />
+    <Content Include="Templates\Education.ru.htm" />
+    <Content Include="Templates\educationaldiscounts.ru.htm" />
+    <Content Include="Templates\important.ru.htm" />
+    <Content Include="Templates\important.ua.htm" />
+    <Content Include="Templates\Keyboard.ru.htm" />
+    <Content Include="Templates\Localization.ru.htm" />
+    <Content Include="Templates\ProStudio.ru.htm" />
+    <Content Include="Templates\SMBseminar.ru.htm" />
+    <Content Include="Templates\Template1.ru.htm" />
+    <Content Include="Templates\Template1.ua.htm" />
+    <Content Include="Templates\Template2.ru.htm" />
+    <Content Include="Templates\Template2.ua.htm" />
+    <Content Include="Templates\Trainings.ru_.htm" />
+    <Content Include="Templates\Trainings.ua.htm" />
+    <Content Include="Templates\Trainings.ru.htm" />
+    <Content Include="SuccessStories.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_LocalResources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54160</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Erc</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

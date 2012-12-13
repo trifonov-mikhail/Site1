@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Apple">
+  <DataContextMoniker Name="/AppleDataContext" />
+  <nestedChildShapes>
+    <classShape Id="af9c6615-7939-44f5-a461-b63d7fd2e991" absoluteBounds="5.125, 1.625, 2, 1.6889214715361596">
+      <DataClassMoniker Name="/AppleDataContext/SerialNumber" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80fe0e3f-f204-4c58-9bbd-2a9e58059b4a" absoluteBounds="5.14, 2.085, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48d4cc23-1864-45e8-a038-a9d55a8c8726" absoluteBounds="2.375, 0.625, 2, 1.6889214715361596">
+      <DataClassMoniker Name="/AppleDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="003383ce-768a-417a-96f5-374b2b8d3ecd" absoluteBounds="2.39, 1.085, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

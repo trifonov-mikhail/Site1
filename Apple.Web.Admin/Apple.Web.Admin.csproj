@@ -1,0 +1,1210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{358F0BE6-B410-4D9D-ADE8-B9A89D3A78BB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Apple.Web.Admin</RootNamespace>
+    <AssemblyName>Apple.Web.Admin</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\FormAdapter.cs" />
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Base\CheckBoxListBase.cs" />
+    <Compile Include="Base\RadioButtonListBase.cs" />
+    <Compile Include="Base\LangEditorBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\EditorBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\UserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AddItemButton.ascx.cs">
+      <DependentUpon>AddItemButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AddItemButton.ascx.designer.cs">
+      <DependentUpon>AddItemButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CBL\ContentPagesCBL.cs" />
+    <Compile Include="Controls\CBL\ContentSectionsCBL.cs" />
+    <Compile Include="Controls\DatePicker.ascx.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DatePicker.ascx.designer.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\ContentSectionsEditor.ascx.cs">
+      <DependentUpon>ContentSectionsEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\ContentSectionsEditor.ascx.designer.cs">
+      <DependentUpon>ContentSectionsEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\ContentPagesEditor.ascx.cs">
+      <DependentUpon>ContentPagesEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\ContentPagesEditor.ascx.designer.cs">
+      <DependentUpon>ContentPagesEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\CaseStudyEditor.ascx.cs">
+      <DependentUpon>CaseStudyEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\CaseStudyEditor.ascx.designer.cs">
+      <DependentUpon>CaseStudyEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\CaseStudiesEditor.ascx.cs">
+      <DependentUpon>CaseStudiesEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\CaseStudiesEditor.ascx.designer.cs">
+      <DependentUpon>CaseStudiesEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\DownloadFileDetails.ascx.cs">
+      <DependentUpon>DownloadFileDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\DownloadFileDetails.ascx.designer.cs">
+      <DependentUpon>DownloadFileDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\iPadActionEditors.ascx.cs">
+      <DependentUpon>iPadActionEditors.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\iPadActionEditors.ascx.designer.cs">
+      <DependentUpon>iPadActionEditors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\SeminarRegistration.ascx.cs">
+      <DependentUpon>SeminarRegistration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\SeminarRegistration.ascx.designer.cs">
+      <DependentUpon>SeminarRegistration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\SeminarRegistrationApproval.ascx.cs">
+      <DependentUpon>SeminarRegistrationApproval.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\SeminarRegistrationApproval.ascx.designer.cs">
+      <DependentUpon>SeminarRegistrationApproval.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\SeminarRegistrationPending.ascx.cs">
+      <DependentUpon>SeminarRegistrationPending.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\SeminarRegistrationPending.ascx.designer.cs">
+      <DependentUpon>SeminarRegistrationPending.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\SeminarRegistrationReject.ascx.cs">
+      <DependentUpon>SeminarRegistrationReject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\SeminarRegistrationReject.ascx.designer.cs">
+      <DependentUpon>SeminarRegistrationReject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\SuccessStoriesEditor.ascx.cs">
+      <DependentUpon>SuccessStoriesEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\SuccessStoriesEditor.ascx.designer.cs">
+      <DependentUpon>SuccessStoriesEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\SuccessStoryEditor.ascx.cs">
+      <DependentUpon>SuccessStoryEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\SuccessStoryEditor.ascx.designer.cs">
+      <DependentUpon>SuccessStoryEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\HomePageBlocksEditor.ascx.cs">
+      <DependentUpon>HomePageBlocksEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\HomePageBlocksEditor.ascx.designer.cs">
+      <DependentUpon>HomePageBlocksEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\HomePageBlockEditor.ascx.cs">
+      <DependentUpon>HomePageBlockEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\HomePageBlockEditor.ascx.designer.cs">
+      <DependentUpon>HomePageBlockEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\HomePageImage.ascx.cs">
+      <DependentUpon>HomePageImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\HomePageImage.ascx.designer.cs">
+      <DependentUpon>HomePageImage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\LatestProductsEditor2.ascx.cs">
+      <DependentUpon>LatestProductsEditor2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\LatestProductsEditor2.ascx.designer.cs">
+      <DependentUpon>LatestProductsEditor2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\LatestProductEditor2.ascx.cs">
+      <DependentUpon>LatestProductEditor2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\LatestProductEditor2.ascx.designer.cs">
+      <DependentUpon>LatestProductEditor2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\LatestProductsEditor.ascx.cs">
+      <DependentUpon>LatestProductsEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\LatestProductsEditor.ascx.designer.cs">
+      <DependentUpon>LatestProductsEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\LatestProductEditor.ascx.cs">
+      <DependentUpon>LatestProductEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\LatestProductEditor.ascx.designer.cs">
+      <DependentUpon>LatestProductEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\DevelopersToolsEditor.ascx.cs">
+      <DependentUpon>DevelopersToolsEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\DevelopersToolsEditor.ascx.designer.cs">
+      <DependentUpon>DevelopersToolsEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\DevelopersToolEditor.ascx.cs">
+      <DependentUpon>DevelopersToolEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\DevelopersToolEditor.ascx.designer.cs">
+      <DependentUpon>DevelopersToolEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\DevelopersLinksEditor.ascx.cs">
+      <DependentUpon>DevelopersLinksEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\DevelopersLinksEditor.ascx.designer.cs">
+      <DependentUpon>DevelopersLinksEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\DevelopersLinkEditor.ascx.cs">
+      <DependentUpon>DevelopersLinkEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\DevelopersLinkEditor.ascx.designer.cs">
+      <DependentUpon>DevelopersLinkEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\ForDevelopersPageEditor.ascx.cs">
+      <DependentUpon>ForDevelopersPageEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\ForDevelopersPageEditor.ascx.designer.cs">
+      <DependentUpon>ForDevelopersPageEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\NewsSubscribersEditor.ascx.cs">
+      <DependentUpon>NewsSubscribersEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\NewsSubscribersEditor.ascx.designer.cs">
+      <DependentUpon>NewsSubscribersEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\PageHtmlEditor.ascx.cs">
+      <DependentUpon>PageHtmlEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\PageHtmlEditor.ascx.designer.cs">
+      <DependentUpon>PageHtmlEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\SerialNumbersEditor.ascx.cs">
+      <DependentUpon>SerialNumbersEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\SerialNumbersEditor.ascx.designer.cs">
+      <DependentUpon>SerialNumbersEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\SerialNumbersUpload.ascx.cs">
+      <DependentUpon>SerialNumbersUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\SerialNumbersUpload.ascx.designer.cs">
+      <DependentUpon>SerialNumbersUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\StoriesEditor.ascx.cs">
+      <DependentUpon>StoriesEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\StoriesEditor.ascx.designer.cs">
+      <DependentUpon>StoriesEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\StoryEditor.ascx.cs">
+      <DependentUpon>StoryEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\StoryEditor.ascx.designer.cs">
+      <DependentUpon>StoryEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\NewsEditor.ascx.cs">
+      <DependentUpon>NewsEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\NewsEditor.ascx.designer.cs">
+      <DependentUpon>NewsEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\NewsItemEditor.ascx.cs">
+      <DependentUpon>NewsItemEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\NewsItemEditor.ascx.designer.cs">
+      <DependentUpon>NewsItemEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\TranslatableTextItemEditor.ascx.cs">
+      <DependentUpon>TranslatableTextItemEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\TranslatableTextItemEditor.ascx.designer.cs">
+      <DependentUpon>TranslatableTextItemEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\TranslatableTextsEditor.ascx.cs">
+      <DependentUpon>TranslatableTextsEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\TranslatableTextsEditor.ascx.designer.cs">
+      <DependentUpon>TranslatableTextsEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HtmlEditor.ascx.cs">
+      <DependentUpon>HtmlEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\HtmlEditor.ascx.designer.cs">
+      <DependentUpon>HtmlEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\ArticlesEditor.ascx.cs">
+      <DependentUpon>ArticlesEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\ArticlesEditor.ascx.designer.cs">
+      <DependentUpon>ArticlesEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomMenu.cs" />
+    <Compile Include="Controls\Editors\AdminsEditor.ascx.cs">
+      <DependentUpon>AdminsEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\AdminsEditor.ascx.designer.cs">
+      <DependentUpon>AdminsEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\CategoriesEditor.ascx.cs">
+      <DependentUpon>CategoriesEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\CategoriesEditor.ascx.designer.cs">
+      <DependentUpon>CategoriesEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\CityEditor.ascx.cs">
+      <DependentUpon>CityEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\CityEditor.ascx.designer.cs">
+      <DependentUpon>CityEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\CitiesEditor.ascx.cs">
+      <DependentUpon>CitiesEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\CitiesEditor.ascx.designer.cs">
+      <DependentUpon>CitiesEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\ContactFormsEditor.ascx.cs">
+      <DependentUpon>ContactFormsEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\ContactFormsEditor.ascx.designer.cs">
+      <DependentUpon>ContactFormsEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\LogEditor.ascx.cs">
+      <DependentUpon>LogEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\LogEditor.ascx.designer.cs">
+      <DependentUpon>LogEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\StatusRequestsEditor.ascx.cs">
+      <DependentUpon>StatusRequestsEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\StatusRequestsEditor.ascx.designer.cs">
+      <DependentUpon>StatusRequestsEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\ServiceEditor.ascx.cs">
+      <DependentUpon>ServiceEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\ServiceEditor.ascx.designer.cs">
+      <DependentUpon>ServiceEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\ServicesEditor.ascx.cs">
+      <DependentUpon>ServicesEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\ServicesEditor.ascx.designer.cs">
+      <DependentUpon>ServicesEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\PartnerEditor.ascx.cs">
+      <DependentUpon>PartnerEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\PartnerEditor.ascx.designer.cs">
+      <DependentUpon>PartnerEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\PartnersEditor.ascx.cs">
+      <DependentUpon>PartnersEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\PartnersEditor.ascx.designer.cs">
+      <DependentUpon>PartnersEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\SpecializationsEditor.ascx.cs">
+      <DependentUpon>SpecializationsEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\SpecializationsEditor.ascx.designer.cs">
+      <DependentUpon>SpecializationsEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\SpecializationEditor.ascx.cs">
+      <DependentUpon>SpecializationEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\SpecializationEditor.ascx.designer.cs">
+      <DependentUpon>SpecializationEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\ProductEditor.ascx.cs">
+      <DependentUpon>ProductEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\ProductEditor.ascx.designer.cs">
+      <DependentUpon>ProductEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\ProductsEditor.ascx.cs">
+      <DependentUpon>ProductsEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\ProductsEditor.ascx.designer.cs">
+      <DependentUpon>ProductsEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\PagesEditor.ascx.cs">
+      <DependentUpon>PagesEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\PagesEditor.ascx.designer.cs">
+      <DependentUpon>PagesEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\CategoryEditor.ascx.cs">
+      <DependentUpon>CategoryEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\CategoryEditor.ascx.designer.cs">
+      <DependentUpon>CategoryEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HtmlCssInclude.cs" />
+    <Compile Include="Controls\HtmlJsInclude.cs" />
+    <Compile Include="Controls\RBL\ImagePositionRBL.cs" />
+    <Compile Include="Controls\Editors\TrackSerialNumbersEditor.ascx.cs">
+      <DependentUpon>TrackSerialNumbersEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\TrackSerialNumbersEditor.ascx.designer.cs">
+      <DependentUpon>TrackSerialNumbersEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CSV\CsvFileGenerator.cs" />
+    <Compile Include="CSV\CsvHelper.cs" />
+    <Compile Include="CSV\FormatHelper.cs" />
+    <Compile Include="CSV\GetCsvControl.cs" />
+    <Compile Include="CSV\ReportOptions.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Interfaces\IAddControl.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\ImageResizer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\Form.browser" />
+    <Content Include="App_Themes\Default\GridView.skin" />
+    <Content Include="App_Themes\Default\DetailsView.skin" />
+    <Content Include="App_Themes\Default\SiteMapPath.skin" />
+    <Content Include="Controls\Editors\iPadActionEditors.ascx" />
+    <Content Include="Controls\Editors\TrackSerialNumbersEditor.ascx" />
+    <Content Include="GetImage.ashx" />
+    <Content Include="App_Themes\Default\TextBox.skin" />
+    <Content Include="App_Themes\Default\Button.skin" />
+    <Content Include="GetDownloadFile.ashx" />
+    <None Include="js\calendar\src\calendar.php" />
+    <Content Include="MailTemplates\iPadAction_ChangeStatus.htm" />
+    <Content Include="Main.Master" />
+    <Content Include="Web.Config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.aspx" />
+    <Content Include="Controls\DatePicker.ascx" />
+    <Content Include="Controls\Editors\ContentSectionsEditor.ascx" />
+    <Content Include="Controls\Editors\ContentPagesEditor.ascx" />
+    <Content Include="Controls\Editors\CaseStudyEditor.ascx" />
+    <Content Include="Controls\Editors\CaseStudiesEditor.ascx" />
+    <Content Include="Controls\Editors\DownloadFileDetails.ascx" />
+    <Content Include="Controls\Editors\SeminarRegistration.ascx" />
+    <Content Include="Controls\Editors\SeminarRegistrationApproval.ascx" />
+    <Content Include="Controls\Editors\SeminarRegistrationPending.ascx" />
+    <Content Include="Controls\Editors\SeminarRegistrationReject.ascx" />
+    <Content Include="Controls\Editors\SuccessStoriesEditor.ascx" />
+    <Content Include="Controls\Editors\SuccessStoryEditor.ascx" />
+    <Content Include="Controls\Editors\HomePageBlocksEditor.ascx" />
+    <Content Include="Controls\Editors\HomePageBlockEditor.ascx" />
+    <Content Include="Controls\Editors\HomePageImage.ascx" />
+    <Content Include="Controls\Editors\LatestProductsEditor2.ascx" />
+    <Content Include="Controls\Editors\LatestProductEditor2.ascx" />
+    <Content Include="Controls\Editors\LatestProductsEditor.ascx" />
+    <Content Include="Controls\Editors\LatestProductEditor.ascx" />
+    <Content Include="Controls\Editors\DevelopersToolsEditor.ascx" />
+    <Content Include="Controls\Editors\DevelopersToolEditor.ascx" />
+    <Content Include="Controls\Editors\DevelopersLinksEditor.ascx" />
+    <Content Include="Controls\Editors\DevelopersLinkEditor.ascx" />
+    <Content Include="Controls\Editors\ForDevelopersPageEditor.ascx" />
+    <Content Include="Controls\Editors\NewsSubscribersEditor.ascx" />
+    <Content Include="Controls\Editors\PageHtmlEditor.ascx" />
+    <Content Include="Controls\Editors\SerialNumbersEditor.ascx" />
+    <Content Include="Controls\Editors\SerialNumbersUpload.ascx" />
+    <Content Include="Controls\Editors\StoriesEditor.ascx" />
+    <Content Include="Controls\Editors\StoryEditor.ascx" />
+    <Content Include="Controls\Editors\NewsEditor.ascx" />
+    <Content Include="Controls\Editors\NewsItemEditor.ascx" />
+    <Content Include="Controls\Editors\TranslatableTextItemEditor.ascx" />
+    <Content Include="Controls\Editors\TranslatableTextsEditor.ascx" />
+    <Content Include="Controls\HtmlEditor.ascx" />
+    <Content Include="Controls\Editors\ArticlesEditor.ascx" />
+    <Content Include="Controls\Editors\ContactFormsEditor.ascx" />
+    <Content Include="Controls\Editors\LogEditor.ascx" />
+    <Content Include="Controls\Editors\StatusRequestsEditor.ascx" />
+    <Content Include="css\AdminPage.css" />
+    <Content Include="Controls\AddItemButton.ascx" />
+    <Content Include="Controls\Editors\AdminsEditor.ascx" />
+    <Content Include="Controls\Editors\CategoriesEditor.ascx" />
+    <Content Include="Controls\Editors\CityEditor.ascx" />
+    <Content Include="Controls\Editors\CitiesEditor.ascx" />
+    <Content Include="Controls\Editors\ServiceEditor.ascx" />
+    <Content Include="Controls\Editors\ServicesEditor.ascx" />
+    <Content Include="Controls\Editors\PartnerEditor.ascx" />
+    <Content Include="Controls\Editors\PartnersEditor.ascx" />
+    <Content Include="Controls\Editors\SpecializationsEditor.ascx" />
+    <Content Include="Controls\Editors\SpecializationEditor.ascx" />
+    <Content Include="Controls\Editors\ProductEditor.ascx" />
+    <Content Include="Controls\Editors\ProductsEditor.ascx" />
+    <Content Include="Controls\Editors\PagesEditor.ascx" />
+    <Content Include="Controls\Editors\CategoryEditor.ascx" />
+    <Content Include="css\Common.css" />
+    <Content Include="css\Developer.css" />
+    <Content Include="Global.asax" />
+    <Content Include="img\1px.gif" />
+    <Content Include="img\Apple-icon.gif" />
+    <Content Include="img\bc.jpg" />
+    <Content Include="img\bl.jpg" />
+    <Content Include="img\blank.gif" />
+    <Content Include="img\br.jpg" />
+    <Content Include="img\Calendar.png" />
+    <Content Include="img\Delete.png" />
+    <Content Include="img\down.png" />
+    <Content Include="img\Edit.png" />
+    <Content Include="img\footerLe.gif" />
+    <Content Include="img\footerRi.gif" />
+    <Content Include="img\logo.jpg" />
+    <Content Include="img\off.gif" />
+    <Content Include="img\on.gif" />
+    <Content Include="img\tbg.gif" />
+    <Content Include="img\tbgo.gif" />
+    <Content Include="img\tl.gif" />
+    <Content Include="img\tlo.gif" />
+    <Content Include="img\tr.gif" />
+    <Content Include="img\tro.gif" />
+    <Content Include="img\Undo.png" />
+    <Content Include="img\up.png" />
+    <Content Include="img\Update.png" />
+    <Content Include="js\calendar\lang\calendar-af.js" />
+    <Content Include="js\calendar\lang\calendar-al.js" />
+    <Content Include="js\calendar\lang\calendar-bg.js" />
+    <Content Include="js\calendar\lang\calendar-big5.js" />
+    <Content Include="js\calendar\lang\calendar-br.js" />
+    <Content Include="js\calendar\lang\calendar-ca.js" />
+    <Content Include="js\calendar\lang\calendar-cs-win.js" />
+    <Content Include="js\calendar\lang\calendar-cs.js" />
+    <Content Include="js\calendar\lang\calendar-da.js" />
+    <Content Include="js\calendar\lang\calendar-de.js" />
+    <Content Include="js\calendar\lang\calendar-du.js" />
+    <Content Include="js\calendar\lang\calendar-el.js" />
+    <Content Include="js\calendar\lang\calendar-en.js" />
+    <Content Include="js\calendar\lang\calendar-es.js" />
+    <Content Include="js\calendar\lang\calendar-fi.js" />
+    <Content Include="js\calendar\lang\calendar-fr.js" />
+    <Content Include="js\calendar\lang\calendar-he.js" />
+    <Content Include="js\calendar\lang\calendar-hr.js" />
+    <Content Include="js\calendar\lang\calendar-hu.js" />
+    <Content Include="js\calendar\lang\calendar-it.js" />
+    <Content Include="js\calendar\lang\calendar-jp.js" />
+    <Content Include="js\calendar\lang\calendar-ko.js" />
+    <Content Include="js\calendar\lang\calendar-lt-utf8.js" />
+    <Content Include="js\calendar\lang\calendar-lt.js" />
+    <Content Include="js\calendar\lang\calendar-lv.js" />
+    <Content Include="js\calendar\lang\calendar-no.js" />
+    <Content Include="js\calendar\lang\calendar-pl-utf8.js" />
+    <Content Include="js\calendar\lang\calendar-pl.js" />
+    <Content Include="js\calendar\lang\calendar-pt.js" />
+    <Content Include="js\calendar\lang\calendar-ro.js" />
+    <Content Include="js\calendar\lang\calendar-ru.js" />
+    <Content Include="js\calendar\lang\calendar-ru_win_.js" />
+    <Content Include="js\calendar\lang\calendar-si.js" />
+    <Content Include="js\calendar\lang\calendar-sk.js" />
+    <Content Include="js\calendar\lang\calendar-sp.js" />
+    <Content Include="js\calendar\lang\calendar-sv.js" />
+    <Content Include="js\calendar\lang\calendar-tr.js" />
+    <Content Include="js\calendar\lang\calendar-ua.js" />
+    <Content Include="js\calendar\lang\calendar-ua_cp1251.js" />
+    <Content Include="js\calendar\lang\calendar-zh.js" />
+    <Content Include="js\calendar\src\calendar-core.js" />
+    <Content Include="js\calendar\src\calendar-date-core.js" />
+    <Content Include="js\calendar\src\calendar-setup.js" />
+    <Content Include="js\calendar\src\calendar-src.js" />
+    <Content Include="js\calendar\src\calendar.js" />
+    <Content Include="js\calendar\themes\aqua.css" />
+    <Content Include="js\calendar\themes\aqua\active-bg.gif" />
+    <Content Include="js\calendar\themes\aqua\dark-bg.gif" />
+    <Content Include="js\calendar\themes\aqua\hover-bg.gif" />
+    <Content Include="js\calendar\themes\aqua\menuarrow.gif" />
+    <Content Include="js\calendar\themes\aqua\normal-bg.gif" />
+    <Content Include="js\calendar\themes\aqua\rowhover-bg.gif" />
+    <Content Include="js\calendar\themes\aqua\status-bg.gif" />
+    <Content Include="js\calendar\themes\aqua\title-bg.gif" />
+    <Content Include="js\calendar\themes\aqua\today-bg.gif" />
+    <Content Include="js\calendar\themes\bluexp.css" />
+    <Content Include="js\calendar\themes\fancyblue.css" />
+    <Content Include="js\calendar\themes\fancyblue\bg_all3.gif" />
+    <Content Include="js\calendar\themes\fancyblue\bg_body.gif" />
+    <Content Include="js\calendar\themes\fancyblue\bg_button.gif" />
+    <Content Include="js\calendar\themes\fancyblue\bg_button_hover.gif" />
+    <Content Include="js\calendar\themes\fancyblue\bg_footer.gif" />
+    <Content Include="js\calendar\themes\fancyblue\bg_title.gif" />
+    <Content Include="js\calendar\themes\fancyblue\bg_wn.gif" />
+    <Content Include="js\calendar\themes\fancyblue\test.gif" />
+    <Content Include="js\calendar\themes\forest.css" />
+    <Content Include="js\calendar\themes\forest\bg_body.gif" />
+    <Content Include="js\calendar\themes\forest\bg_button.gif" />
+    <Content Include="js\calendar\themes\forest\bg_button_hover.gif" />
+    <Content Include="js\calendar\themes\forest\bg_footer.gif" />
+    <Content Include="js\calendar\themes\forest\bg_title.gif" />
+    <Content Include="js\calendar\themes\forest\bg_wn.gif" />
+    <Content Include="js\calendar\themes\green.css" />
+    <Content Include="js\calendar\themes\greengrass.css" />
+    <Content Include="js\calendar\themes\icons\calendar1.gif" />
+    <Content Include="js\calendar\themes\icons\calendar2.gif" />
+    <Content Include="js\calendar\themes\icons\calendar3.gif" />
+    <Content Include="js\calendar\themes\icons\calendar4.gif" />
+    <Content Include="js\calendar\themes\icons\calendar5.gif" />
+    <Content Include="js\calendar\themes\icons\calendar6.gif" />
+    <Content Include="js\calendar\themes\img.gif" />
+    <Content Include="js\calendar\themes\layouts\big.css" />
+    <Content Include="js\calendar\themes\layouts\huge.css" />
+    <Content Include="js\calendar\themes\layouts\layout-2d.css" />
+    <Content Include="js\calendar\themes\layouts\layout-3d.css" />
+    <Content Include="js\calendar\themes\layouts\layout-common.css" />
+    <Content Include="js\calendar\themes\layouts\small.css" />
+    <Content Include="js\calendar\themes\layouts\tiny.css" />
+    <Content Include="js\calendar\themes\maroon.css" />
+    <Content Include="js\calendar\themes\menuarrow.gif" />
+    <Content Include="js\calendar\themes\menuarrow.png" />
+    <Content Include="js\calendar\themes\menuarrow2.gif" />
+    <Content Include="js\calendar\themes\scroller-down-hover.gif" />
+    <Content Include="js\calendar\themes\scroller-down.gif" />
+    <Content Include="js\calendar\themes\scroller-up-hover.gif" />
+    <Content Include="js\calendar\themes\scroller-up.gif" />
+    <Content Include="js\calendar\themes\system.css" />
+    <Content Include="js\calendar\themes\win2k.css" />
+    <Content Include="js\calendar\themes\winter.css" />
+    <Content Include="js\calendar\themes\winxp.css" />
+    <Content Include="js\calendar\themes\wood.css" />
+    <Content Include="js\calendar\themes\wood\bg_all3.gif" />
+    <Content Include="js\calendar\themes\wood\bg_body.gif" />
+    <Content Include="js\calendar\themes\wood\bg_button.gif" />
+    <Content Include="js\calendar\themes\wood\bg_footer.gif" />
+    <Content Include="js\calendar\themes\yellow.css" />
+    <Content Include="js\calendar\utils\button.js" />
+    <Content Include="js\calendar\utils\colorpicker.js" />
+    <Content Include="js\calendar\utils\demo.js" />
+    <Content Include="js\calendar\utils\dhelp\src\demo.js" />
+    <Content Include="js\calendar\utils\dhelp\src\tree.js" />
+    <Content Include="js\calendar\utils\dhelp\src\zptabs.js" />
+    <Content Include="js\calendar\utils\dhelp\themes\default.css" />
+    <Content Include="js\calendar\utils\dhelp\themes\demos.css" />
+    <Content Include="js\calendar\utils\dhelp\themes\img\arrow-grey.gif" />
+    <Content Include="js\calendar\utils\dhelp\themes\img\dot.gif" />
+    <Content Include="js\calendar\utils\dhelp\themes\img\down-arrow-grey.gif" />
+    <Content Include="js\calendar\utils\dhelp\themes\img\fetching.gif" />
+    <Content Include="js\calendar\utils\dialog.js" />
+    <Content Include="js\calendar\utils\dom.js" />
+    <Content Include="js\calendar\utils\draggable.js" />
+    <Content Include="js\calendar\utils\droparea.js" />
+    <Content Include="js\calendar\utils\dropdown.js" />
+    <Content Include="js\calendar\utils\dump.js" />
+    <Content Include="js\calendar\utils\edit_inline.js" />
+    <Content Include="js\calendar\utils\html2xhtml.js" />
+    <Content Include="js\calendar\utils\indicator.js" />
+    <Content Include="js\calendar\utils\jsdocs\allclasses-frame.html" />
+    <Content Include="js\calendar\utils\jsdocs\allclasses-noframe.html" />
+    <Content Include="js\calendar\utils\jsdocs\Array.html" />
+    <Content Include="js\calendar\utils\jsdocs\Dialog.html" />
+    <Content Include="js\calendar\utils\jsdocs\Function.html" />
+    <Content Include="js\calendar\utils\jsdocs\GLOBALS.html" />
+    <Content Include="js\calendar\utils\jsdocs\help-doc.html" />
+    <Content Include="js\calendar\utils\jsdocs\index-all.html" />
+    <Content Include="js\calendar\utils\jsdocs\index.html" />
+    <Content Include="js\calendar\utils\jsdocs\Log.html" />
+    <Content Include="js\calendar\utils\jsdocs\logoNew.gif" />
+    <Content Include="js\calendar\utils\jsdocs\Object.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-button.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-colorpicker.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-demo.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-dialog.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-dom.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-draggable.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-droparea.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-dropdown.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-dump.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-edit_inline.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-frame.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-html2xhtml.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-indicator.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-log4js.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-maximizable.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-movable.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-pane.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-parse.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-popup.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-preloadimages.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-progressbar.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-resizable.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-sizable.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-spinner.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-stylesheet.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-button.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-colorpicker.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-demo.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-dialog.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-dom.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-draggable.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-droparea.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-dropdown.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-dump.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-edit_inline.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-html2xhtml.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-indicator.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-log4js.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-maximizable.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-movable.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-pane.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-parse.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-popup.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-preloadimages.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-progressbar.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-resizable.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-sizable.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-spinner.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-stylesheet.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-transport.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-tree.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-utils.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-wizard.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-word2num.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-zapatec-core.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-zapatec.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-zpdrag.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-zpeventdriven.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-zpobjects.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-zpselenium.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-zptabs.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-zpwidget-sample.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary-zpwidget.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-summary.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-transport.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-tree.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-tree.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-utils.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-wizard.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-word2num.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-zapatec-core.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-zapatec.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-zpdrag.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-zpeventdriven.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-zpobjects.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-zpselenium.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-zptabs.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-zpwidget-sample.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\overview-zpwidget.js.html" />
+    <Content Include="js\calendar\utils\jsdocs\stylesheet.css" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\AccordionTab.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\AccordionTabs.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\BasicTree.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Button.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\ChildWidget.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\ColorPicker.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\demo.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\DropDown.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\EditInline.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\EventDriven.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\ImagePreloader.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Indicator.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Modal.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Pane.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Parse.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\PreloadImages.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\ProgressBar.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Spinner.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\SRProp.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\StyleSheet.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Tab.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Tabs.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\TabsWizard.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Transport.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Tree.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Tree\Node.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Utils\Draggable.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Utils\DropArea.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Utils\Maximizable.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Utils\Movable.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Utils\Resizable.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Utils\Sizable.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Widget.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\Wizard.html" />
+    <Content Include="js\calendar\utils\jsdocs\Zapatec\word2num.html" />
+    <Content Include="js\calendar\utils\log4js.js" />
+    <Content Include="js\calendar\utils\maximizable.js" />
+    <Content Include="js\calendar\utils\movable.js" />
+    <Content Include="js\calendar\utils\pane.js" />
+    <Content Include="js\calendar\utils\pane_files\blank.html" />
+    <Content Include="js\calendar\utils\parse.js" />
+    <Content Include="js\calendar\utils\popup.js" />
+    <Content Include="js\calendar\utils\preloadimages.js" />
+    <Content Include="js\calendar\utils\progressbar.js" />
+    <Content Include="js\calendar\utils\resizable.js" />
+    <Content Include="js\calendar\utils\sizable.js" />
+    <Content Include="js\calendar\utils\spinner.js" />
+    <Content Include="js\calendar\utils\stylesheet.js" />
+    <Content Include="js\calendar\utils\transport.js" />
+    <Content Include="js\calendar\utils\tree.js" />
+    <Content Include="js\calendar\utils\utils.js" />
+    <Content Include="js\calendar\utils\wizard.css" />
+    <Content Include="js\calendar\utils\wizard.js" />
+    <Content Include="js\calendar\utils\word2num.js" />
+    <Content Include="js\calendar\utils\zapatec-core.js" />
+    <Content Include="js\calendar\utils\zapatec-src.js" />
+    <Content Include="js\calendar\utils\zapatec.js" />
+    <Content Include="js\calendar\utils\zpbusy.gif" />
+    <Content Include="js\calendar\utils\zpdrag.js" />
+    <Content Include="js\calendar\utils\zpempty.gif" />
+    <Content Include="js\calendar\utils\zpeventdriven.js" />
+    <Content Include="js\calendar\utils\zpobjects.js" />
+    <Content Include="js\calendar\utils\zpsaving.gif" />
+    <Content Include="js\calendar\utils\zpselenium.js" />
+    <Content Include="js\calendar\utils\zpupdating.gif" />
+    <Content Include="js\calendar\utils\zpwidget-sample.html" />
+    <Content Include="js\calendar\utils\zpwidget-sample.js" />
+    <Content Include="js\calendar\utils\zpwidget.js" />
+    <Content Include="js\jq\jquery-1.3.2.min.js" />
+    <Content Include="js\jq\jquery-ui-1.7.2.custom.min.js" />
+    <Content Include="js\tiny_mce\langs\en.js" />
+    <Content Include="js\tiny_mce\license.txt" />
+    <Content Include="js\tiny_mce\mce_init_black.js" />
+    <Content Include="js\tiny_mce\mce_init_blue.js" />
+    <Content Include="js\tiny_mce\mce_init_silver.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="js\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="js\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="js\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="js\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="js\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="js\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="js\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="js\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\compat2x\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\compat2x\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="js\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="js\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="js\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="js\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="js\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="js\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="js\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="js\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\media\css\content.css" />
+    <Content Include="js\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="js\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\media\img\flash.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\flv_player.swf" />
+    <Content Include="js\tiny_mce\plugins\media\img\quicktime.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\realmedia.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\shockwave.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\trans.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\windowsmedia.gif" />
+    <Content Include="js\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="js\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="js\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\media\media.htm" />
+    <Content Include="js\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\css\content.css" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\img\pagebreak.gif" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\img\trans.gif" />
+    <Content Include="js\tiny_mce\plugins\paste\blank.htm" />
+    <Content Include="js\tiny_mce\plugins\paste\css\blank.css" />
+    <Content Include="js\tiny_mce\plugins\paste\css\pasteword.css" />
+    <Content Include="js\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="js\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="js\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="js\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="js\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\preview\example.html" />
+    <Content Include="js\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="js\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="js\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\safari\blank.htm" />
+    <Content Include="js\tiny_mce\plugins\safari\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\safari\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="js\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="js\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="js\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\style\props.htm" />
+    <Content Include="js\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="js\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="js\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="js\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="js\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="js\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="js\tiny_mce\plugins\table\row.htm" />
+    <Content Include="js\tiny_mce\plugins\table\table.htm" />
+    <Content Include="js\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="js\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="js\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="js\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\template\template.htm" />
+    <Content Include="js\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="js\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="js\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="js\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="js\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="js\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="js\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="js\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="js\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="js\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="js\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="js\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="js\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="js\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="js\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="js\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="js\tiny_mce\tiny_mce.js" />
+    <Content Include="js\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="js\tiny_mce\tiny_mce_src.js" />
+    <Content Include="js\tiny_mce\utils\editable_selects.js" />
+    <Content Include="js\tiny_mce\utils\form_utils.js" />
+    <Content Include="js\tiny_mce\utils\mctabs.js" />
+    <Content Include="js\tiny_mce\utils\validate.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="css\LoginPage.css" />
+    <Content Include="Templates\logo.png" />
+    <Content Include="Templates\MenuItem.txt" />
+    <Content Include="Templates\SeminarRegistration_1.htm" />
+    <Content Include="Templates\SeminarRegistration_2.htm" />
+    <Content Include="Templates\SeminarRegistration_3.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Apple.Web.Admin.Library\Apple.Web.Admin.Library.csproj">
+      <Project>{5B472673-E7DE-4BFF-8840-7DE09477F268}</Project>
+      <Name>Apple.Web.Admin.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apple.Web.Admin.RewriteModule\Apple.Web.Admin.RewriteModule.csproj">
+      <Project>{EC7417D9-44C0-4C2F-ADC2-E8B381C05FF6}</Project>
+      <Name>Apple.Web.Admin.RewriteModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apple.Web.Admin.SiteMapProvider\Apple.Web.Admin.SiteMapProvider.csproj">
+      <Project>{3A0667C8-A322-4C10-95AE-AE32F16DE5E5}</Project>
+      <Name>Apple.Web.Admin.SiteMapProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apple.Web.Log\Apple.Web.Log.csproj">
+      <Project>{B43A706B-F06C-4D6B-8A19-476F716C99D2}</Project>
+      <Name>Apple.Web.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Erc.Apple.Data\Erc.Apple.Data.csproj">
+      <Project>{D61C029A-5BF7-4B16-95FB-B3E06AB9E8FB}</Project>
+      <Name>Erc.Apple.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Editors\App_LocalResources\SerialNumbersUpload.ascx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\Default\img\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54155</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:81/ERCAdmin</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="Apple.Web.Admin.MainMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="formMain" runat="server">
+        <div id="page">
+            <div id="logo">
+                <img src="img/logo.jpg" alt="logo" />
+                <img alt="logo" src="img/Apple-icon.gif" height="60px"/>
+            </div>
+            <asp:LoginView ID="LV" runat="server">
+                <AnonymousTemplate>
+                    <div class="logout">
+                        Пожалуйста, авторизируйтесь!
+                    </div>
+                </AnonymousTemplate>
+                <LoggedInTemplate>
+                    <asp:LoginStatus LogoutText="Выход" ID="LoginStatus" LogoutAction="RedirectToLoginPage" runat="server" CssClass="logout" />
+                </LoggedInTemplate>
+            </asp:LoginView>
+            <div class="clearer">
+            </div>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            <div id="footer">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:Transparent;">
+                    <tr>
+                    </tr>
+                    <tr align="center">
+                        <td class="ft ls">
+                        </td>
+                        <td>
+                            &copy Apple <%=DateTime.Today.Year %>
+                        </td>
+                        <td class="ft rs">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

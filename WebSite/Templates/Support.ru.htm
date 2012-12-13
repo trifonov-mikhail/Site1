@@ -1,0 +1,257 @@
+﻿<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+	 <script src="http://code.jquery.com/ui/1.7.2/jquery-ui.js"></script>
+<div id="contentmenu">
+	<table width="100%">
+		<tr>
+			<td>
+				<img src="~/images/contentmenu_separator2.gif" alt="" />
+				<a href="~/{lang}/support/Warranty.aspx">Гарантийные<br /> обязательства Apple</a>
+			</td>
+			<td>
+				<img src="~/images/contentmenu_separator2.gif" alt="" /><a href="~/{lang}/support/AASP.aspx">Получение
+					статуса авторизованного<br /> сервисного центра по продукции Apple</a>
+			</td>
+			<td>
+				<img src="~/images/contentmenu_separator2.gif" alt="" /><a href="~/{lang}/ServiceCenters.aspx">Авторизованные<br />
+					сервисные центры Apple</a>
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- #contentmenu-->
+<div id="container">
+	<div id="content">
+		<div class="main">
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<td style="width: 170px;">
+						<div class="greyroundblock">
+							<img src="~/images/bg_block_top.gif" />
+							<div class="greyroundblock_content">
+								<h2>
+									Служба поддержки Apple
+								</h2>
+								<br />
+								<a href="/ru/support/localization.aspx">Украинизация ПО</a><br />
+								<br />
+								<a href="http://support.apple.com/ru_RU/manuals/" target="blank">Руководства</a><br />
+								<br />
+								<a href="http://support.apple.com/ru_RU/specs/" target="blank">Характеристики</a>
+								<br />
+								<br />
+								<a href="http://support.apple.com/ru_RU/downloads/" target="blank">Загрузка</a><br />
+								<br />
+								<a href="#">Устаревшее и снятое с эксплуатации оборудование</a>
+								<br />
+								<br />
+								<a href="http://search.info.apple.com/" target="blank">Расширенный поиск информации по продукции Apple</a><br />
+								<br />
+								<a href="http://www.apple.com/ru/support/appleid/" target="blank">Получение Apple ID</a>
+							</div>
+						</div>
+						<div class="clear">
+						</div>
+						<div class="greyroundblock">
+							<img src="~/images/bg_block_top.gif" alt="" />
+							<div class="greyroundblock_content">
+								<h2>
+									Часто задаваемые вопросы по поддержке
+								</h2>
+								<br />
+								<a href="http://www.apple.com/ru/support/ipod/five_rs/" target="blank">Пять действий, которые решают большинство неполадок с iPod</a><br />
+								<br />
+								<a href="http://www.apple.com/ru/itunes/how-to/#video-sync" target="blank">Синхронизация музыки в iPod</a>
+								<br />
+								<br />
+								<a href="http://discussions.apple.com/index.jspa" target="blank">Полезные советы при переходе c Windows на Mac </a>
+								<br />
+								<br />
+								<a href="http://discussions.apple.com/index.jspa" target="blank">Полезные дискуссии по сервису (En)</a>
+							</div>
+						</div>
+					</td>
+					<td>
+					</td>
+					<td class="v-top">
+					<script type="text/javascript">
+						var imagesPath = ['~/images/Service_banner_ierc.com.ua_1.png', '~/images/Service_banner_ierc.com.ua_2.png', '~/images/Service_banner_ierc.com.ua_3.png'];
+						var urlPath = ['http://ierc.com.ua/ru/ipad_action.aspx', 'http://www.apple.com/ru/support/ipodnano_replacement/', 'http://www.apple.com/ru/support/imac-harddrive/']
+						if ($.cookie("currentImageSupport") === null)
+							$.cookie("currentImageSupport", 0);
+
+
+						var currentImage = parseInt($.cookie("currentImageSupport"));
+
+						$(document).ready(function () {
+							if (currentImage == NaN)
+								currentImage = 0;
+							currentImage = parseInt(currentImage) + 1;
+
+							if (currentImage > 2)
+								currentImage = 0
+
+							$.cookie("currentImageSupport", currentImage);
+
+							$('#imagebanner').attr("src", imagesPath[currentImage]);
+							$('#banner').attr("href", urlPath[currentImage]);
+
+
+
+
+							function changeImages() {
+								$("#imagebanner").fadeOut(1000, function () {
+									currentImage = parseInt($.cookie("currentImageSupport"));
+
+									if (currentImage === undefined)
+										currentImage = 0;
+
+									currentImage = currentImage + 1;
+
+									if (currentImage > 2)
+										currentImage = 0
+
+									$.cookie("currentImageSupport", currentImage);
+									$("#imagebanner").attr("src", imagesPath[currentImage]);
+									$('#banner').attr("href", urlPath[currentImage]);
+								}).fadeIn(1000);
+							}
+
+							window.setInterval(changeImages, 5000);
+						});
+			
+			
+		</script>
+		<a href='http://ierc.com.ua/ru/ipad_action.aspx' id="banner">
+			<img src='~/images/main.jpg' alt=""  id="imagebanner"/>
+		</a>
+						<table>
+							<tr>
+								<td>
+									<img src="~/images/support_img3.jpg" alt="" style="padding: 0px 15px" />
+								</td>
+								<td class="v-top">
+									<h2>
+										iPad + iTunes</h2>
+									<br />
+									<a href="http://support.apple.com/manuals/ipad/" target="blank">Руководства</a><br />
+									<br />
+									<a href="http://www.apple.com/ru/itunes/download/" target="blank">Загрузить iTunes</a>
+									<br />
+									<br />
+									<a href="http://www.apple.com/ru/support/ipad/assistant/wifi/" target="blank">Подключение к сетям Wi-Fi и устранение неполадок с ними</a>
+									<br />
+									<br />
+									<a href="http://www.apple.com/ru/support/ipad/assistant/mail/" target="blank">Настройка Mail и устранение неполадок</a>
+									<br />
+									<br />
+									<a href="http://www.apple.com/ru/support/ipad/basics/" target="blank">Еще >></a>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="height: 60px;">
+									&nbsp;</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="~/images/support_img1.jpg" alt="" style="padding: 0px 15px" />
+								</td>
+								<td class="v-top">
+									<h2>
+										iPod + iTunes</h2>
+									<br />
+									<a href="http://www.apple.com/ru/support/ipod/" target="blank">Руководства</a><br />
+									<br />
+									<a href="http://www.apple.com/ru/itunes/how-to/#video-sync" target="blank">Синхронизация музыки</a>
+									<br />
+									<br />
+									<a href="http://www.apple.com/ru/itunes/download/" target="blank">Загрузить iTunes</a>
+									<br />
+									<br />
+									<a href="http://www.apple.com/ru/support/ipod/" target="blank">Еще >></a>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="height: 60px;">
+									&nbsp;</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="~/images/support_img2.jpg" alt="" style="padding: 0px 15px" />
+								</td>
+								<td class="v-top">
+									<h2>
+										Mac</h2>
+									<br />
+									<a href="http://www.apple.com/ru/macosx/" target="blank">Mac OS X Snow Leopard</a><br />
+									<br />
+									<a href="http://www.apple.com/ru/support/snowleopard/#installation" target="blank">Установка Snow Leopard</a>
+									<br />
+									<br />
+									<a href="http://www.apple.com/ru/support/snowleopard/#mail" target="blank">Работа с почтой</a>
+									<br />
+									<br />
+									<a href="http://www.apple.com/ru/support/snowleopard/" target="blank">Еще >></a>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- #content-->
+	<div class="clear">
+	</div>
+</div>
+<!-- #container-->
+<div class="sidebar sr">
+	<table align="right">
+		<tr>
+			<td class="txtrightmenu">
+				<a href="http://www.erc.ua/Service/#&&p=5" target="blank">Узнать о ходе ремонта</a>
+			</td>
+			<td>
+				<a href="http://www.erc.ua/Service/#&&p=5" target="blank">
+					<img src="~/images/icon_repair.png" alt="" align="middle" /></a>
+			</td>
+		</tr>
+		<tr>
+			<td class="txtrightmenu">
+				<a href="http://www.apple.com/ru/support/exchange_repair/" target="blank">Программы Apple<br />
+					по замене и ремонту</a>
+			</td>
+			<td>
+				<a href="http://www.apple.com/ru/support/exchange_repair/" target="blank">
+					<img src="~/images/icon_change_repair.png" alt="" align="middle" /></a>
+			</td>
+		</tr>
+		<tr>
+			<td class="txtrightmenu">
+				<a href="~/{lang}/content/Important.aspx">Что важно знать о гарантии </a>
+			</td>
+			<td>
+				<a href="~/{lang}/content/Important.aspx">
+					<img src="~/images/iconimportant.png" alt="" align="middle" /></a>
+			</td>
+		</tr>
+		<tr>
+			<td class="txtrightmenu">
+				<a href="~/{lang}/Request_SN.aspx">Проверка серийного номера</a>
+			</td>
+			<td>
+				<a href="~/{lang}/Request_SN.aspx">
+					<img src="~/images/sn.jpg" alt="sn.jpg" align="middle" /></a>
+			</td>
+		</tr>      
+		<tr>
+			<td class="txtrightmenu">
+				<a href="~/files/shipping.pdf">Отправка изделий в сервисный центр</a>
+			</td>
+			<td>
+				<a href="/files/shipping.pdf">
+					<img src="~/images/shipping.jpg"  style="padding-top:3px;" width="57px" alt="shipping" align="middle" /></a>
+			</td>
+		</tr>      
+	</table>
+</div>
+<!-- .sidebar.sr -->

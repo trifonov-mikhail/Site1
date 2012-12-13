@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Codebehind="Main.Master.cs" Inherits="Apple.Web.MainMaster" %>
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+<%@ Register TagPrefix="uc" Namespace="Apple.Web.Controls" Assembly="Apple.Web" %>
+<%@ Register TagPrefix="uc" TagName="Langs" Src="~/Controls/LangSwitcher.ascx" %>
+<%@ Register TagPrefix="uc" TagName="SideBar" Src="~/Controls/SideBarPanel.ascx" %>
+<%@ Register TagPrefix="uc" TagName="UdMess" Src="~/Controls/UnderDevelopmentMessage.ascx" %>
+<%@ Register TagPrefix="uc" TagName="Subscribe" Src="~/Controls/NewsSubscribePopup.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="title" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+</head>
+<body>
+    <div class="lang">
+    </div>
+    <div id="wrapper">
+        <div id="header">
+            <div id="MainMenu" style="<%=MainMenuStyle %>">
+                <div id="tab">
+                    <asp:Menu ID="Menu" runat="server" DataSourceID="menuDS" Orientation="Horizontal"
+                        OnPreRender="Menu_PreRender">
+                    </asp:Menu>
+                    <asp:SiteMapDataSource ID="menuDS" runat="server" ShowStartingNode="False" OnInit="menuDS_Init">
+                    </asp:SiteMapDataSource>
+                </div>
+            </div>
+            <div id="ERC_logo">
+                <a href='<%=this.GetUrl("~/{lang}/default.aspx") %>'>
+                    <asp:Image ID="iLogo" ImageUrl="~/images/ERC_logo.png" AlternateText="logo" runat="server" />
+                </a>
+            </div>
+            <div id="AuthorisedDis_logo">
+                <a href='<%=this.GetUrl("~/{lang}/default.aspx") %>'>
+                    <asp:Image ID="Image1" ImageUrl="~/images/AuthorisedDis_logo.png" AlternateText="logo"
+                        runat="server" />
+                </a>
+            </div>
+        </div>
+        <!-- #header-->
+        <div id="middle">
+            <form id="form1" runat="server">
+                <asp:ScriptManager ID="sm" runat="server">
+                </asp:ScriptManager>
+                <asp:ContentPlaceHolder ID="SecondMenu" runat="server">
+                </asp:ContentPlaceHolder>
+                <div id="container">
+                    <div id="content">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <!-- #content-->
+                </div>
+                <!-- #container-->
+                <div class="sidebar sr">
+                    <asp:ContentPlaceHolder ID="SideBarContent" runat="server">
+                        <uc:SideBar ID="bar" runat="server" />
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!-- .sidebar.sr -->
+                <uc:Subscribe ID="subs" runat="server" />
+                <uc:UdMess ID="mess" runat="server" />
+            </form>
+        </div>
+        <!-- #middle-->
+    </div>
+    <!-- #wrapper -->
+    <div id="footer">
+        <%--<asp:Localize ID="LocalizeSiteFooter" runat="server" Text='<%$Resources: AppleRes,SiteFooter %>'></asp:Localize>--%>
+        <table align="center">
+            <tr>
+                <td>
+                    <div id="footer_left">
+                        <span>
+                        <%=this.TranslatableText("FooterLeftBlock")%>
+                        </span>
+                        <uc:Langs ID="Langs" runat="server" />
+                    </div>
+                    <div id="footer_right">
+                        <span>
+                        <%=this.TranslatableText("FooterRightBlock")%>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- #footer -->
+</body>
+</html>

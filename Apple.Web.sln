@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apple.Web", "WebSite\Apple.Web.csproj", "{69AFF095-64CA-4F68-B1DC-77B41F72FCAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erc.Apple.Data", "Erc.Apple.Data\Erc.Apple.Data.csproj", "{D61C029A-5BF7-4B16-95FB-B3E06AB9E8FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apple.Web.Admin", "Apple.Web.Admin\Apple.Web.Admin.csproj", "{358F0BE6-B410-4D9D-ADE8-B9A89D3A78BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apple.Web.Admin.RewriteModule", "Apple.Web.Admin.RewriteModule\Apple.Web.Admin.RewriteModule.csproj", "{EC7417D9-44C0-4C2F-ADC2-E8B381C05FF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apple.Web.Admin.SiteMapProvider", "Apple.Web.Admin.SiteMapProvider\Apple.Web.Admin.SiteMapProvider.csproj", "{3A0667C8-A322-4C10-95AE-AE32F16DE5E5}"
+EndProject
+Project("{4F174C21-8C12-11D0-8340-0000F80270F8}") = "Erc.Apple.DB", "Apple.DB\Erc.Apple.DB.dbp", "{EF8536CF-C16B-4D15-9F69-B4A2363C2241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apple.Web.Log", "Apple.Web.Log\Apple.Web.Log.csproj", "{B43A706B-F06C-4D6B-8A19-476F716C99D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apple.Web.Admin.Library", "Apple.Web.Admin.Library\Apple.Web.Admin.Library.csproj", "{5B472673-E7DE-4BFF-8840-7DE09477F268}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69AFF095-64CA-4F68-B1DC-77B41F72FCAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69AFF095-64CA-4F68-B1DC-77B41F72FCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69AFF095-64CA-4F68-B1DC-77B41F72FCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69AFF095-64CA-4F68-B1DC-77B41F72FCAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D61C029A-5BF7-4B16-95FB-B3E06AB9E8FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61C029A-5BF7-4B16-95FB-B3E06AB9E8FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61C029A-5BF7-4B16-95FB-B3E06AB9E8FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61C029A-5BF7-4B16-95FB-B3E06AB9E8FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{358F0BE6-B410-4D9D-ADE8-B9A89D3A78BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358F0BE6-B410-4D9D-ADE8-B9A89D3A78BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358F0BE6-B410-4D9D-ADE8-B9A89D3A78BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358F0BE6-B410-4D9D-ADE8-B9A89D3A78BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC7417D9-44C0-4C2F-ADC2-E8B381C05FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7417D9-44C0-4C2F-ADC2-E8B381C05FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7417D9-44C0-4C2F-ADC2-E8B381C05FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7417D9-44C0-4C2F-ADC2-E8B381C05FF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A0667C8-A322-4C10-95AE-AE32F16DE5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0667C8-A322-4C10-95AE-AE32F16DE5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0667C8-A322-4C10-95AE-AE32F16DE5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0667C8-A322-4C10-95AE-AE32F16DE5E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B43A706B-F06C-4D6B-8A19-476F716C99D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B43A706B-F06C-4D6B-8A19-476F716C99D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B43A706B-F06C-4D6B-8A19-476F716C99D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B43A706B-F06C-4D6B-8A19-476F716C99D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B472673-E7DE-4BFF-8840-7DE09477F268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B472673-E7DE-4BFF-8840-7DE09477F268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B472673-E7DE-4BFF-8840-7DE09477F268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B472673-E7DE-4BFF-8840-7DE09477F268}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

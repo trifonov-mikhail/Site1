@@ -1,0 +1,54 @@
+﻿.items-name
+{
+}
+
+.scroll-items
+{
+	border-collapse:separate;
+	height:160px;
+}
+.scroll-items td
+{
+	padding: 0 12px 10px 12px; 
+}
+.scroll-item a
+{
+	display:block;
+	height:30px;
+}
+.container
+{
+    position:relative;   
+    overflow:hidden;
+    width:608px;
+    height:160px;
+    padding:0;
+}
+
+.pane
+{
+    position:absolute;
+    top:0;
+    left:-12px;
+}
+.fade_left
+{
+	position:absolute;
+	width:20px;
+	height:300px;
+	top:0;
+	left:0;
+}
+.fade_right
+{
+	position:absolute;
+	width:20px;
+	height:300px;
+	top:0;
+	right:0;
+}
+
+.hand
+{
+	cursor:pointer;
+}

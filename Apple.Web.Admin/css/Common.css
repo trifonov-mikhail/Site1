@@ -1,0 +1,318 @@
+﻿body 
+{
+	padding:0px;
+	margin:0px;
+	background-color:#cddcec;
+	font-family: Verdana,arial,helvetica,sans-serif;
+	font-size:11px;
+}
+h2
+{
+	font-size:16px;
+}
+#page
+{
+	background-color:#1a2a35;
+	margin:5px auto;
+}
+#logo
+{
+	float:left;
+	margin:5px;
+	color:#fff;
+	font-size:16pt;
+}
+.logout
+{
+	float:right;
+	margin:20px;
+	color:#fff;
+}
+.clearer
+{
+	clear:both;
+}
+.settingsLink
+{
+	color:#fff;
+	position:relative;
+	top:-20px;
+	left:-20px;
+}
+#content
+{
+	color:#1a2a35;
+	background-color:#fff;
+	text-align:left;
+	font-family:Verdana;
+	padding:20px;
+}
+#loginform
+{
+	border:solid 1px #aaa;
+	width:235px;
+	margin:0px auto;
+	padding:20px 40px;
+	text-align:center;
+	background-color:#eee;
+}
+#footer
+{
+	color:#aaa;
+	background-color:#fff;
+	font-size:9px;
+	text-align:center;
+}
+.ErrorMess
+{
+	display:block;
+	border:solid 1px #f00;
+	padding:10px 20px;
+	margin:5px;
+	color:#f00;
+}
+.Mess
+{
+	display:block;
+	border:solid 1px #22A315;
+	padding:10px 20px;
+	margin:5px;
+	color:#22A315;
+}
+
+.addButton
+{
+	font-size:14px;
+	margin-bottom:10px;
+}
+
+.addButton .bl,.addButton .br
+{
+	height: 30px;
+	width: 12px;
+}
+.addButton .bc
+{
+	height: 30px;
+}
+.addButton .bl
+{
+	background-image: url(../img/bl.jpg);
+}
+.addButton .bc
+{
+	background-image: url(../img/bc.jpg);
+}
+.addButton .br
+{
+	background-image: url(../img/br.jpg);
+}
+.stab
+{
+	background-color:#fff;
+}
+.tab .tl,.tab .tr,.stab .tl,.stab .tr
+{
+	height: 35px;
+	width: 15px;
+}
+.tab .tbg,.stab .tbg
+{
+	height:35px;
+}
+.tab .tl
+{
+	background-image: url(../img/tl.gif);
+}
+.stab .tl
+{
+	background-image: url(../img/tlo.gif);
+}
+
+.tab .tbg
+{
+	background-image: url(../img/tbg.gif);
+}
+.tab .tbg a{
+	font-size:13px;
+	font-weight:bold;
+	color:#fff;
+}
+.stab .tbg a,.addButton a
+{
+	font-size:13px;
+	font-weight:bold;
+	text-decoration:none;
+	color:#2f3f50;
+}
+.addButton a
+{
+	color:#fff;
+}
+.stab .tbg
+{
+	background-image: url(../img/tbgo.gif);
+}
+
+.tab .tr
+{
+	background-image: url(../img/tr.gif);
+}
+.stab .tr
+{
+	background-image: url(../img/tro.gif);
+}
+.ft
+{
+	width: 16px; 
+	height: 25px; 
+	background-position:bottom; 
+	background-repeat:no-repeat;
+}
+.ls
+{
+	background-image: url(../img/footerLe.gif);
+}
+.rs
+{
+	background-image: url(../img/footerRi.gif);
+}
+
+.btn
+{
+	background-color:#24add1;
+	border:solid 1px #fff;
+	color:#fff;
+	font-size:11px;
+	width:100px;
+	padding:3px 5px;
+	margin:5px;
+}
+.fild
+{
+	border:solid 1px #ff;
+}
+.ri
+{
+	text-align:right;
+}
+.le
+{
+	text-align:left;
+}
+
+.mylist th
+{
+	background-color:#f3f8ff;
+	border-top:solid 1px #e5eefa;
+	border-bottom:solid 2px #376ebe;
+	padding:4px;
+}
+
+.mylist td
+{
+	border-bottom:solid 1px #cadbe5;
+	padding-left:5px;
+}
+
+.mylist td table td,.mylist th table th
+{
+	border:none;
+}
+
+.mylist a
+{
+	font-weight:bold;
+}
+.mylist a:hover
+{
+	text-decoration:none;
+}
+.row
+{
+	background-color:#fff;
+}
+.altrow
+{
+	background-color:#F9FCFF;
+}
+
+.row:hover, .altrow:hover
+{
+	background-color:#fffde9;
+}
+.editpanel
+{
+	margin-top:15px;
+	padding: 10px;
+	border:solid 1px #cadbe5;
+	background-color: #f9fcff;
+}
+.csimage
+{
+	max-width:600px;
+}
+.pager
+{
+	background-color:#f3f8ff;
+	border-bottom:solid 1px #e5eefa;
+	border-top:solid 2px #376ebe;
+	padding:4px;
+}
+.pager td
+{
+	border:none;
+}
+.subMenu
+{
+	background-color:#E8EEF5;
+	border-bottom:solid 1px #CADBE5;
+	padding:7px 20px;
+}
+.subMenu td
+{
+	height:16px;
+}
+.subMenu a
+{
+	font-size:11px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#aaa;
+	display:block;
+	padding:0px 10px;
+	border-right:solid 2px #aaa;
+}
+.subMenu a:hover, .subMenu a.on
+{
+	color:#22A315;
+	text-decoration:underline;
+}
+#sitepath
+{
+	text-align:left;
+	padding-bottom:15px;
+	font-family: Verdana; 
+	font-size: 20px;
+	color:#333333;
+	font-weight:bold;
+}
+
+td.label
+{
+	font-weight:bold;
+	background-color: rgb(222, 232, 245);
+}
+td.field
+{
+	font-weight:bold;
+	background-color: rgb(239, 243, 251);
+}
+.fileUpload
+{
+	padding: 6px;
+}
+.fileUploadErrors
+{
+	padding-bottom: 10px;
+}
