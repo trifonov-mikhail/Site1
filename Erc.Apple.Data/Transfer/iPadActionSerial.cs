@@ -30,5 +30,33 @@ namespace Erc.Apple.Data
 		
 		[XmlAttribute]
 		public string SellerName { get; set; }
+
+		public string BuyDateText
+		{
+			get {
+				return BuyDate.ToString("dd.MM.yyyy");
+			}
+		}
+
+		public string StatusText
+		{
+			get
+			{
+				switch (Status)
+				{
+					case 0:
+						return "В стадии проверки";
+					case 1:
+						return "Гарантия подтверждена";
+					case 2:
+						return "Гарантия отклонена";
+					case 3:
+						return "Ошибка ввода данных";
+					default:
+						return "не известно";
+						break;
+				}
+			}
+		}
 	}
 }

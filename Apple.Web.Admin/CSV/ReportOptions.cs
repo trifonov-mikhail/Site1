@@ -54,5 +54,12 @@ namespace Apple.Web.Admin.CSV
             get { return footerText; }
             set { footerText = value; }
         }
+
+		public string Splitter { get; set; }
+
+		public ReportOptions()
+		{
+			Splitter = ",";
+		}
     }
 }

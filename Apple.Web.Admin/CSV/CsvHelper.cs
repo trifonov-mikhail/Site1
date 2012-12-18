@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Reflection;
 using System.Collections;
 using System.Text;
@@ -38,24 +38,24 @@ namespace Apple.Web.Admin.CSV
             HttpContext.Current.Response.AddHeader("content-disposition", attachment);
             HttpContext.Current.Response.ContentType = "text/csv; charset=utf-8";
             HttpContext.Current.Response.AddHeader("Pragma", "public");
-
+			
             if (data is DataTable)
             {
                 DataTable t = (DataTable)data;
-                WriteTable(o.Columns, t);
+                WriteTable(o.Columns, t, o);
             }
             else if (data is DataView)
             {
                 DataTable t = ((DataView)data).Table;
-                WriteTable(o.Columns, t);
+                WriteTable(o.Columns, t, o);
             }
             else if (data is IEnumerable)
             {
                 IEnumerator en = ((IEnumerable)data).GetEnumerator();
-                WriteHeader(o.HeaderText);
+                WriteHeader(o.HeaderText, o);
                 while (en.MoveNext())
                 {
-                    ProcessListItem(en.Current, o.Columns);
+                    ProcessListItem(en.Current, o.Columns, o);
                 }
             }
             else
@@ -65,25 +65,29 @@ namespace Apple.Web.Admin.CSV
             HttpContext.Current.Response.End();
         }
 
-        private void WriteTable(string columns, DataTable t)
+        private void WriteTable(string columns, DataTable t, ReportOptions o)
         {
-            WriteHeader(columns);
+            WriteHeader(columns, o);
             foreach (DataRow r in t.Rows)
             {
-                ProcessDataRow(r, columns);
+                ProcessDataRow(r, columns,o );
             }
         }
 
-        private void WriteHeader(string columns)
+        private void WriteHeader(string columns, ReportOptions o)
         {
             if (!String.IsNullOrEmpty(columns))
             {
-                HttpContext.Current.Response.Write(columns);
-                HttpContext.Current.Response.Write(Environment.NewLine);
+				foreach (string c in columns.Split(','))
+				{
+					HttpContext.Current.Response.Write(c);
+					HttpContext.Current.Response.Write(o.Splitter);
+				}
+				HttpContext.Current.Response.Write(Environment.NewLine);
             }
         }
 
-        private void ProcessDataRow(DataRow r, string columns)
+        private void ProcessDataRow(DataRow r, string columns, ReportOptions o)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -91,22 +95,22 @@ namespace Apple.Web.Admin.CSV
             {
                 foreach (DataColumn c in r.Table.Columns)
                 {
-                    AddWithComma(r[c.ColumnName], sb);
+                    AddWithComma(r[c.ColumnName], sb, o.Splitter);
                 }
             }
             else
             {
                 foreach (string c in columns.Split(','))
                 {
-                    AddWithComma(r[c], sb);
+                    AddWithComma(r[c], sb, o.Splitter);
                 }
             }
 
-            HttpContext.Current.Response.Write(sb.ToString().TrimEnd(','));
+            HttpContext.Current.Response.Write(sb.ToString().TrimEnd(o.Splitter[0]));
             HttpContext.Current.Response.Write(Environment.NewLine);
         }
 
-        private void AddWithComma(object value, StringBuilder stringBuilder)
+        private void AddWithComma(object value, StringBuilder stringBuilder, string splitter)
         {
             if (value != null)
             {
@@ -115,10 +119,10 @@ namespace Apple.Web.Admin.CSV
                 if (!String.IsNullOrEmpty(v))
                     stringBuilder.Append(v);
             }
-            stringBuilder.Append(",");
+			stringBuilder.Append(splitter);
         }
 
-        private void ProcessListItem(object p, string colums)
+        private void ProcessListItem(object p, string colums, ReportOptions opt)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -134,11 +138,11 @@ namespace Apple.Web.Admin.CSV
                 {
                     object o = info.GetValue(p, null);
 
-                    AddWithComma(o, sb);
+                    AddWithComma(o, sb, opt.Splitter);
                 }
             }
 
-            HttpContext.Current.Response.Write(sb.ToString().TrimEnd(','));
+            HttpContext.Current.Response.Write(sb.ToString().TrimEnd(opt.Splitter[0]));
             HttpContext.Current.Response.Write(Environment.NewLine);
 
         }

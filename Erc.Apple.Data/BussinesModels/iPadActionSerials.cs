@@ -112,8 +112,8 @@ namespace Erc.Apple.Data
 		}
 
 		public List<ListItem> GetSellers()
-		{			
-			return GetAll().Select(s => new ListItem(s.SellerName, s.Seller.ToString())).OrderBy(s => s.Text).ToList();
+		{
+			return GetAll().Select(s => new { SellerName = s.SellerName, Seller = s.Seller.ToString()}).Distinct().Select(s => new ListItem(s.SellerName, s.Seller.ToString())).OrderBy(s => s.Text).ToList();
 		}
 
 		public List<iPadActionSerial> GetAll()

@@ -103,6 +103,15 @@ namespace Apple.Web.Admin.Controls.Editors {
         protected global::System.Web.UI.WebControls.GridView GridViewItemsList;
         
         /// <summary>
+        /// csv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Apple.Web.Admin.Controls.GetCsvControl csv;
+        
+        /// <summary>
         /// ObjectDataSourceItemsList control.
         /// </summary>
         /// <remarks>

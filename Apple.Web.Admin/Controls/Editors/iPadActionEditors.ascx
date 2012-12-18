@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="iPadActionEditors.ascx.cs" Inherits="Apple.Web.Admin.Controls.Editors.iPadActionEditors" %>
-
+<%@ Register Namespace="Apple.Web.Admin.Controls" TagPrefix="UC" Assembly="Apple.Web.Admin" %>    
 <asp:MultiView ID="MvEditor" runat="server" ActiveViewIndex="0">
 	<asp:View ID="ViewList" runat="server">
 	Статус
@@ -71,6 +71,9 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
+		<br />
+        <UC:GetCsvControl id="csv" DataSourceID="ObjectDataSourceItemsList" runat="server" />
+        <br />
         <asp:ObjectDataSource ID="ObjectDataSourceItemsList" runat="server" 
 			SelectMethod="GetAll"
             TypeName="Erc.Apple.Data.iPadActionSerials" DataObjectTypeName="Erc.Apple.Data.iPadActionSerial"

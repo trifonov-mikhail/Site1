@@ -22,6 +22,10 @@ namespace Apple.Web.Admin.Controls.Editors
 		protected List<string> Serials = null;
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			csv.Options.FileName = "activation"+DateTime.Now.ToString("dd.MM.yyyy");
+			csv.Options.HeaderText = "Серийный Номер,Дата покупки,Email,Место покупки,Статус";
+			csv.Options.Columns = "Serial,BuyDateText,Email,SellerName,StatusText";
+			csv.Options.Splitter = ";";
 			
 		}
 
