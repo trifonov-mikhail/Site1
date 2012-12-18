@@ -109,6 +109,7 @@
 <p>
 <b>Для активации услуги дополнительной гарантии введите данные в поля ниже:</b>
 </p>
+
 <p>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <thead>
@@ -152,6 +153,11 @@ DN6G1GRXDFHW)</td>
 </tr>
 </tbody>
 </table>
+
+<p>Важно о поле "Серийный номер iPad": первую букву S вводить не нужно (это кодировка словосочетания «Serial No»). 
+	Все буквенные символы должны быть введены только латиницей.
+</p>
+
 <input type="button" name="button" id="btnSend" value="Отправить" class="keybut" />
 
 <div class=ugtxt>
@@ -165,6 +171,8 @@ Apple: 0 800 302 777 0</p>
 </span>
 <span id="ltWrongLength" style="display:none" class="resultmess">
 	Серийный номер должен состоять из 12 знаков.
+	Первую букву S вводить не нужно (это кодировка словосочетания «Serial No»). 
+	Все буквенные символы должны быть введены только латиницей.
 </span>
 <span id="ltDuplicateSerialNumber" style="display:none" class="resultmess">
 	Данный серийный номер уже зарегистрирован.
