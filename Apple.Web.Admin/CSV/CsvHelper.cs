@@ -10,6 +10,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
+using System.IO;
+using System.Diagnostics;
 
 namespace Apple.Web.Admin.CSV
 {
@@ -21,6 +23,8 @@ namespace Apple.Web.Admin.CSV
         public CsvHelper()
         {
         }
+
+		StringBuilder sb;
         /// <summary>
         /// Writes to response generated csv file
         /// </summary>
@@ -29,6 +33,7 @@ namespace Apple.Web.Admin.CSV
         /// <param name="fileName">File name to return to user</param>
         public void WriteToCSV(object data, ReportOptions o)
         {
+			sb = new StringBuilder();
             if (String.IsNullOrEmpty(o.FileName))
                 throw new InvalidOperationException("Parameter fileName is not valid!");
 
@@ -62,6 +67,14 @@ namespace Apple.Web.Admin.CSV
             {
                 throw new InvalidOperationException("Parameter data is not DataTable, or DataView, or Generic List<>!");
             }
+			var Response = HttpContext.Current.Response;
+			string result = sb.ToString();
+			Encoding enc2 = Encoding.UTF8;
+			var bytes = enc2.GetBytes(result);
+			var enc = Encoding.UTF8;
+			
+			Response.Write(enc2.GetString(Encoding.Convert(enc, enc2, bytes)));
+			Response.Flush();			
             HttpContext.Current.Response.End();
         }
 
@@ -80,34 +93,34 @@ namespace Apple.Web.Admin.CSV
             {
 				foreach (string c in columns.Split(','))
 				{
-					HttpContext.Current.Response.Write(c);
-					HttpContext.Current.Response.Write(o.Splitter);
+					sb.Append(c);
+					sb.Append(o.Splitter);
 				}
-				HttpContext.Current.Response.Write(Environment.NewLine);
+				sb.Append(Environment.NewLine);
             }
         }
 
         private void ProcessDataRow(DataRow r, string columns, ReportOptions o)
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb1 = new StringBuilder();
 
             if (String.IsNullOrEmpty(columns))
             {
                 foreach (DataColumn c in r.Table.Columns)
                 {
-                    AddWithComma(r[c.ColumnName], sb, o.Splitter);
+                    AddWithComma(r[c.ColumnName], sb1, o.Splitter);
                 }
             }
             else
             {
                 foreach (string c in columns.Split(','))
                 {
-                    AddWithComma(r[c], sb, o.Splitter);
+                    AddWithComma(r[c], sb1, o.Splitter);
                 }
             }
 
-            HttpContext.Current.Response.Write(sb.ToString().TrimEnd(o.Splitter[0]));
-            HttpContext.Current.Response.Write(Environment.NewLine);
+            sb.Append(sb1.ToString().TrimEnd(o.Splitter[0]));
+            sb.Append(Environment.NewLine);
         }
 
         private void AddWithComma(object value, StringBuilder stringBuilder, string splitter)
@@ -124,7 +137,7 @@ namespace Apple.Web.Admin.CSV
 
         private void ProcessListItem(object p, string colums, ReportOptions opt)
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb1 = new StringBuilder();
 
             foreach (string c in colums.Split(','))
             {
@@ -138,12 +151,12 @@ namespace Apple.Web.Admin.CSV
                 {
                     object o = info.GetValue(p, null);
 
-                    AddWithComma(o, sb, opt.Splitter);
+                    AddWithComma(o, sb1, opt.Splitter);
                 }
             }
 
-            HttpContext.Current.Response.Write(sb.ToString().TrimEnd(opt.Splitter[0]));
-            HttpContext.Current.Response.Write(Environment.NewLine);
+            sb.Append(sb1.ToString().TrimEnd(opt.Splitter[0]));
+            sb.Append(Environment.NewLine);
 
         }
     }
