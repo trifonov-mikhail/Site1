@@ -41,7 +41,7 @@ namespace Apple.Web.Admin.CSV
             HttpContext.Current.Response.Clear();
             HttpContext.Current.Response.ClearHeaders();
             HttpContext.Current.Response.AddHeader("content-disposition", attachment);
-            HttpContext.Current.Response.ContentType = "text/csv; charset=utf-8";
+			HttpContext.Current.Response.ContentType = "text/csv; charset=windows-1251";
             HttpContext.Current.Response.AddHeader("Pragma", "public");
 			
             if (data is DataTable)
@@ -69,14 +69,21 @@ namespace Apple.Web.Admin.CSV
             }
 			var Response = HttpContext.Current.Response;
 			string result = sb.ToString();
-			Encoding enc2 = Encoding.UTF8;
-			var bytes = enc2.GetBytes(result);
-			var enc = Encoding.UTF8;
-			
-			Response.Write(enc2.GetString(Encoding.Convert(enc, enc2, bytes)));
+			Response.ContentEncoding = Encoding.GetEncoding(1251);
+			Response.Write(ConvertString(result, Encoding.UTF8, Encoding.GetEncoding(1251)));
+	
 			Response.Flush();			
             HttpContext.Current.Response.End();
         }
+
+		private static string ConvertString(string s, Encoding source, Encoding dest)
+		{
+			var bytes = source.GetBytes(s);
+			var bytes2 = Encoding.Convert(source, dest, bytes);
+
+			return dest.GetString(bytes2);
+			
+		}
 
         private void WriteTable(string columns, DataTable t, ReportOptions o)
         {
