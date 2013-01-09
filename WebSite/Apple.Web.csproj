@@ -76,6 +76,7 @@
     <Content Include="DownloadFile.aspx" />
     <Content Include="images\activation.jpg" />
     <Content Include="images\calendar.gif" />
+    <Content Include="images\home.png" />
     <Content Include="images\overlay\close.png" />
     <Content Include="images\overlay\white.png" />
     <Content Include="images\transparent.png" />
