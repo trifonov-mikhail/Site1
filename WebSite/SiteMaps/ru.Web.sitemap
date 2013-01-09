@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
     <siteMapNode url="~/ru/Default.aspx" title="Домашняя"  description="">
+		<siteMapNode url="~/ru/Default.aspx?home" title=" "  description=""/>
 		<siteMapNode url="~/ru/WhyMac.aspx" title="Почему Мак?"  description="">
 			<siteMapNode url="~/ru/Consumers.aspx" title="Домашние пользователи"  description=""/>
 			<siteMapNode url="~/ru/ErcProAudio.aspx" title="Аудио"  description=""/>

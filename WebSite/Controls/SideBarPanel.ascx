@@ -1,4 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Codebehind="SideBarPanel.ascx.cs" Inherits="Apple.Web.Controls.SideBarPanel" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Codebehind="SideBarPanel.ascx.cs"
+    Inherits="Apple.Web.Controls.SideBarPanel" %>
 <asp:Repeater ID="rItems" runat="server" OnItemDataBound="rItems_ItemDataBound">
     <HeaderTemplate>
         <table align="right">

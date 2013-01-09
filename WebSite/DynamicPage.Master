@@ -15,6 +15,25 @@
     <meta name="title" content="" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
+<!--responsive design	(begin)-->
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<link href='css/responsive.css' rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<!--(end)-->	
+<style type="text/css">
+.AspNet-Menu-Horizontal > ul > li:first-child > a
+{
+	background-image: url('/images/home.png');
+	width:20px; height:16px; 
+	margin-top:12px !important;	
+}
+.AspNet-Menu-Horizontal > ul > li:first-child > a > span
+{
+	display:none;	
+}
+</style>
 </head>
 <body>
     <div class="lang">

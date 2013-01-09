@@ -1,8 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" Codebehind="Default.ascx.cs" Inherits="Apple.Web.Controls.Default" %>
 
 <%@ Register TagPrefix="uc" TagName="Blocks" Src="~/Controls/HomePageBlocks.ascx" %>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-	 <script src="http://code.jquery.com/ui/1.7.2/jquery-ui.js"></script>
+
 <div class="main" style="margin-top: -10px;">
 
 		<script type="text/javascript">
@@ -10,7 +9,6 @@
 			var urlPath = ['<%=this.url1 %>', '<%=this.url2 %>']
 			if ($.cookie("currentImage") === null)
 				$.cookie("currentImage", 0);
-
 
 			var currentImage = parseInt($.cookie("currentImage"));
 			

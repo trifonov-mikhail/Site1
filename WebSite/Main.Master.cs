@@ -60,7 +60,7 @@ namespace Apple.Web
                 {
                     foreach (MenuItem mi in Menu.Items)
                     {
-                        string page = mi.NavigateUrl.ToLower();
+						string page = mi.NavigateUrl.ToLower();
                         string code = tp.ParentMenuItem.ToLower();
                         if (page.Contains(code))
                         {

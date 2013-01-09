@@ -6,14 +6,33 @@
 <%@ Register TagPrefix="uc" TagName="SideBar" Src="~/Controls/SideBarPanel.ascx" %>
 <%@ Register TagPrefix="uc" TagName="UdMess" Src="~/Controls/UnderDevelopmentMessage.ascx" %>
 <%@ Register TagPrefix="uc" TagName="Subscribe" Src="~/Controls/NewsSubscribePopup.ascx" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head runat="server">
     <title></title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="title" content="" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
+	
+<!--responsive design	(begin)-->
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<link href='css/responsive.css' rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<!--(end)-->	
+<style type="text/css">
+.AspNet-Menu-Horizontal > ul > li:first-child > a
+{
+	background-image: url('/images/home.png');
+	width:20px; height:16px; 
+	margin-top:12px !important;	
+}
+.AspNet-Menu-Horizontal > ul > li:first-child > a > span
+{
+	display:none;	
+}
+</style>
 </head>
 <body>
     <div class="lang">
@@ -30,7 +49,7 @@
                 </div>
             </div>
             <div id="ERC_logo">
-                <a href='<%=this.GetUrl("~/{lang}/default.aspx") %>'>
+                <a href='<%=this.GetUrl("~/{lang}/content/aboutus.aspx") %>'>
                     <asp:Image ID="iLogo" ImageUrl="~/images/ERC_logo.png" AlternateText="logo" runat="server" />
                 </a>
             </div>
@@ -100,6 +119,7 @@ try {
 var pageTracker = _gat._getTracker("UA-16057046-1");
 pageTracker._trackPageview();
 } catch(err) {}</script>
+
 
 </body>
 </html>
