@@ -26,7 +26,7 @@
 {
 	background-image: url('/images/home.png');
 	width:20px; height:16px; 
-	margin-top:12px !important;	
+	margin-top:8px !important;	
 }
 .AspNet-Menu-Horizontal > ul > li:first-child > a > span
 {

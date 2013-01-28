@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apple.Web.Admin.Library", "Apple.Web.Admin.Library\Apple.Web.Admin.Library.csproj", "{5B472673-E7DE-4BFF-8840-7DE09477F268}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apple.Web.Admin", "Apple.Web.Admin\Apple.Web.Admin.csproj", "{358F0BE6-B410-4D9D-ADE8-B9A89D3A78BB}"

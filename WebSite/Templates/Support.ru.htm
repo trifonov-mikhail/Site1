@@ -74,8 +74,8 @@
 					</td>
 					<td class="v-top">
 					<script type="text/javascript">
-						var imagesPath = ['~/images/Service_banner_ierc.com.ua_1.png', '~/images/Service_banner_ierc.com.ua_2.png', '~/images/Service_banner_ierc.com.ua_3.png'];
-						var urlPath = ['http://ierc.com.ua/ru/ipad_action.aspx', 'http://www.apple.com/ru/support/ipodnano_replacement/', 'http://www.apple.com/ru/support/imac-harddrive/']
+						var imagesPath = [ '~/images/Service_banner_ierc.com.ua_2.png', '~/images/Service_banner_ierc.com.ua_3.png'];
+						var urlPath = [ 'http://www.apple.com/ru/support/ipodnano_replacement/', 'http://www.apple.com/ru/support/imac-harddrive/']
 						if ($.cookie("currentImageSupport") === null)
 							$.cookie("currentImageSupport", 0);
 
@@ -87,7 +87,7 @@
 								currentImage = 0;
 							currentImage = parseInt(currentImage) + 1;
 
-							if (currentImage > 2)
+							if (currentImage > imagesPath.length)
 								currentImage = 0
 
 							$.cookie("currentImageSupport", currentImage);
@@ -107,7 +107,7 @@
 
 									currentImage = currentImage + 1;
 
-									if (currentImage > 2)
+									if (currentImage > imagesPath.length)
 										currentImage = 0
 
 									$.cookie("currentImageSupport", currentImage);
