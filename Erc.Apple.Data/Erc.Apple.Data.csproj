@@ -79,7 +79,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BussinesModels\DownloadUserForms.cs" />
+    <Compile Include="BussinesModels\MacActionSerials.cs" />
     <Compile Include="BussinesModels\iPadActionSerials.cs" />
+    <Compile Include="Transfer\MacActionSerial.cs" />
     <Compile Include="Transfer\Seller.cs" />
     <Compile Include="Transfer\iPadActionSerial.cs" />
     <Compile Include="BussinesModels\SeminarRegistrations.cs" />

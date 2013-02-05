@@ -19,6 +19,10 @@
     <OldToolsVersion>4.0</OldToolsVersion>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -127,6 +131,13 @@
     </Compile>
     <Compile Include="Controls\Editors\CaseStudiesEditor.ascx.designer.cs">
       <DependentUpon>CaseStudiesEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\MacActionEditors.ascx.cs">
+      <DependentUpon>MacActionEditors.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\MacActionEditors.ascx.designer.cs">
+      <DependentUpon>MacActionEditors.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Editors\DownloadFileDetails.ascx.cs">
       <DependentUpon>DownloadFileDetails.ascx</DependentUpon>
@@ -514,6 +525,7 @@
     <Content Include="App_Themes\Default\GridView.skin" />
     <Content Include="App_Themes\Default\DetailsView.skin" />
     <Content Include="App_Themes\Default\SiteMapPath.skin" />
+    <Content Include="Controls\Editors\MacActionEditors.ascx" />
     <Content Include="Controls\Editors\iPadActionEditors.ascx" />
     <Content Include="Controls\Editors\TrackSerialNumbersEditor.ascx" />
     <Content Include="GetImage.ashx" />
@@ -521,6 +533,7 @@
     <Content Include="App_Themes\Default\Button.skin" />
     <Content Include="GetDownloadFile.ashx" />
     <None Include="js\calendar\src\calendar.php" />
+    <Content Include="MailTemplates\MacAction_ChangeStatus.htm" />
     <Content Include="MailTemplates\iPadAction_ChangeStatus.htm" />
     <Content Include="Main.Master" />
     <Content Include="Web.Config" />

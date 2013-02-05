@@ -25,7 +25,8 @@ namespace Apple.Web.Controls
             LAR,
             AASP,
             ACP,
-			iPadAction
+			iPadAction,
+            MacAction
         }
 
         private StatusType status;

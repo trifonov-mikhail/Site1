@@ -76,6 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Mac_Action.aspx" />
     <Content Include="css\overlay-apple.css" />
     <Content Include="css\standalone.css" />
     <Content Include="DownloadFile.aspx" />
@@ -88,6 +89,9 @@
     <Content Include="iPad_Action.aspx" />
     <Content Include="js\jquery.base64.js" />
     <Content Include="js\jquery.cookie.js" />
+    <Content Include="MailTemplates\MacAction_ChangeStatus.htm" />
+    <Content Include="MailTemplates\request_MacAction.htm" />
+    <Content Include="MailTemplates\iPadAction_ChangeStatus.htm" />
     <Content Include="MailTemplates\request_iPadAction.htm" />
     <Content Include="Templates\ChristmasCampain.ru.htm" />
     <Content Include="Web.config" />
@@ -158,6 +162,13 @@
     </Compile>
     <Compile Include="Controls\SeminarRegistrationControl.ascx.designer.cs">
       <DependentUpon>SeminarRegistrationControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mac_Action.aspx.cs">
+      <DependentUpon>Mac_Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mac_Action.aspx.designer.cs">
+      <DependentUpon>Mac_Action.aspx</DependentUpon>
     </Compile>
     <Compile Include="DownloadFile.aspx.cs">
       <DependentUpon>DownloadFile.aspx</DependentUpon>
