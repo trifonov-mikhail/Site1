@@ -20,6 +20,8 @@ namespace Apple.Web.Controls
 		protected string url2 = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            ShowAuctionBanner();
             News dao = new News();
             NewsItem item = dao.GetLastOneNewsForPage(3,CurrentLanguage);
 
@@ -30,6 +32,18 @@ namespace Apple.Web.Controls
 
 			url1 = setHyperLink("HomePageBannerUrl");
 			url2 = setHyperLink("HomePageBannerUrl2");
+        }
+
+        private void ShowAuctionBanner()
+        {
+            phStandart.Visible = true;
+            phAuction.Visible = false;
+            if (DateTime.Now > new DateTime(2013, 02, 07, 22, 0, 0) &&
+                DateTime.Now < new DateTime(2013, 03, 14, 22, 0, 0))
+            {
+                phStandart.Visible = false;
+                phAuction.Visible = true;
+            }
         }
 
 		private string setHyperLink( string key)

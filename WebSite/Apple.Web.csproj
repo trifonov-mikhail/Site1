@@ -76,6 +76,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\education_main.jpg" />
+    <Content Include="images\head_image_011.jpg" />
+    <Content Include="images\head_image_01c.jpg" />
+    <Content Include="images\head_image_022.jpg" />
+    <Content Include="images\head_image_02c.jpg" />
+    <Content Include="images\iPad_iPhoto_Hero.jpg" />
+    <Content Include="images\ipod-classic.jpg" />
+    <Content Include="images\ipod-nano.jpg" />
+    <Content Include="images\ipod-shuffle.jpg" />
+    <Content Include="images\ipod-touch.jpg" />
+    <Content Include="images\main1_2012.jpg" />
+    <Content Include="images\main2.jpg" />
+    <Content Include="images\main2_2012.jpg" />
+    <Content Include="images\main3.jpg" />
+    <Content Include="images\MS-Office-for-Mac-2011.jpg" />
+    <Content Include="images\OS_MountainLion.jpg" />
+    <Content Include="images\Service_banner_ierc.com.ua_1.png" />
+    <Content Include="images\Service_banner_ierc.com.ua_2.png" />
+    <Content Include="images\Service_banner_ierc.com.ua_3.png" />
+    <Content Include="images\shipping.jpg" />
+    <Content Include="images\shtrih-pro15.jpg" />
+    <Content Include="images\smallbanner3.jpg" />
+    <Content Include="images\software_scrollernav_easeofuse20101020.png" />
+    <Content Include="images\software_scrollernav_everydaythings20101020.png" />
+    <Content Include="images\software_scrollernav_movies20101020.png" />
+    <Content Include="images\software_scrollernav_music20101020.png" />
+    <Content Include="images\software_scrollernav_photos20101020.png" />
+    <Content Include="images\software_scrollernav_security20101020.png" />
+    <Content Include="images\support_img3.jpg" />
+    <Content Include="images\title_11.png" />
+    <Content Include="images\vido-logo-red.png" />
+    <Content Include="images\vido-logo.png" />
+    <Content Include="images\zebra.jpg" />
     <Content Include="Mac_Action.aspx" />
     <Content Include="css\overlay-apple.css" />
     <Content Include="css\standalone.css" />

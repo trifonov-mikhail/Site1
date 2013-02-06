@@ -45,5 +45,30 @@ namespace Erc.Apple.Data.BussinesModels
 
 			return items;
 		}
+
+        public static List<Seller> GetMacAll()
+        {
+            List<Seller> items = new List<Seller>();
+            using (StoredProcedure sp = new StoredProcedure("MacSeller_GetAll"))
+            {
+                var r = sp.ExecuteReader();
+
+                if (r != null)
+                {
+                    while (r.Read())
+                    {
+                        Seller item = new Seller
+                        {
+                            ID = Convert.ToInt32(r["ID"]),
+                            Name = Convert.ToString(r["Name"])
+                        };
+
+                        items.Add(item);
+                    }
+                }
+            }
+
+            return items;
+        }
 	}
 }

@@ -4,7 +4,8 @@
 
 <div class="main" style="margin-top: -10px;">
 
-		<script type="text/javascript">
+	<asp:PlaceHolder runat="server" ID="phStandart" Visible="false">
+    <script type="text/javascript">
 			var imagesPath = ['<%=this.GetUrl("~/images/main.jpg") %>', '<%=this.GetUrl("~/images/main2.jpg") %>'];
 			var urlPath = ['<%=this.url1 %>', '<%=this.url2 %>']
 			if ($.cookie("currentImage") === null)
@@ -54,7 +55,12 @@
 		<a href='<%=this.url1 %>' id="banner">
 			<img src='<%=this.GetUrl("~/images/main.jpg") %>' alt="" width="645" height="325"  id="imagebanner"/>
 		</a>
-		
+		</asp:PlaceHolder>	
+    <asp:PlaceHolder runat="server" ID="phAuction" Visible="true">
+        <a href='http://ierc.com.ua/ru/Mac_Action.aspx' id="banner">
+			<img src='<%=this.GetUrl("~/images/main3.jpg") %>' alt="" width="645" height="325"  id="imagebanner"/>
+		</a>
+    </asp:PlaceHolder>
 		
 
     <uc:Blocks ID="blocks" runat="server" />

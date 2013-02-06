@@ -90,7 +90,7 @@ namespace Apple.Web
 				return response;
 			}
 
-			if (buydate < new DateTime(2012, 12, 1) || buydate > new DateTime(2013, 1, 10))
+			if (buydate < new DateTime(2013, 02, 8) || buydate > new DateTime(2013, 3, 10))
 			{
 				response.IsValid = false;
 				response.Message = "invalid daterange";
@@ -308,7 +308,7 @@ namespace Apple.Web
 			{
 				if (m_seller == null)
 				{
-					var list = Erc.Apple.Data.BussinesModels.Sellers.GetAll().OrderBy(s=>s.Name);
+                    var list = Erc.Apple.Data.BussinesModels.Sellers.GetMacAll().OrderBy(s => s.Name);
 					m_seller = new List<Seller>();
 					m_seller.Add(new Seller { ID = 0, Name = "Выбрать" });
 					m_seller.AddRange(list);
