@@ -45,22 +45,14 @@
 			
 			>
             <Columns>
-                <%--<asp:TemplateField HeaderText="Редактирование">
-                    <ItemTemplate>
-                        <asp:ImageButton ID="ImageButtonEdit" runat="server" CommandName="Edit" ImageUrl="~/img/edit.png"
-                            AlternateText="Edit"/>
-                    </ItemTemplate>
-                    <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="50px" />
-                </asp:TemplateField>
---%>
-                <asp:BoundField  DataField="Serial" HeaderText="Серийный номер" SortExpression="Serial" ReadOnly="true"/>
+                <asp:BoundField  DataField="Serial" HeaderText="Серийный номер" SortExpression="Serial" ReadOnly="false"/>
 				<asp:TemplateField>
 					<ItemTemplate>
 						<asp:Label runat="server" ID="buyDate"><%#Eval("BuyDate") %></asp:Label>
 					</ItemTemplate>
 				</asp:TemplateField>
-				<%--<asp:BoundField  DataField="BuyDate" HeaderText="Дата покупки" SortExpression="BuyDate" ReadOnly="true" D/>--%>
-				<asp:BoundField  DataField="Email" HeaderText="Email" SortExpression="Email" ReadOnly="true"/>
+				
+				<asp:BoundField  DataField="Email" HeaderText="Email" SortExpression="Email" ReadOnly="false"/>
 				<asp:BoundField  DataField="SellerName" HeaderText="Место покупки" SortExpression="SellerName" ReadOnly="true"/>
 				<asp:BoundField  DataField="Status" HeaderText="Status" SortExpression="Status"  ReadOnly="false"/>
                 <asp:TemplateField HeaderText="Удаление">
