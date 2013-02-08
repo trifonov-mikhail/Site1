@@ -48,8 +48,11 @@ namespace Erc.Apple.Data
             using (StoredProcedure sp = new StoredProcedure("MacActionSerial_UpdateItem"))
             {
                 Debug.WriteLine(string.Format("id={0}, status={1}", item.ID, item.Status));
+
                 sp.Params.Add("@Status", System.Data.SqlDbType.Int).Value = item.Status;
                 sp.Params.Add("@ID", System.Data.SqlDbType.Int).Value = item.ID;
+                sp.Params.Add("@Email", System.Data.SqlDbType.NVarChar).Value = item.Email;
+                sp.Params.Add("@Serial", System.Data.SqlDbType.NVarChar).Value = item.Serial;
                 try
                 {
                     sp.ExecuteNonQuery();

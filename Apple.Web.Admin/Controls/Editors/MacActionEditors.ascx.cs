@@ -36,8 +36,8 @@ namespace Apple.Web.Admin.Controls.Editors
 				string keyName = "ID";
 				int id = (int)e.Keys[keyName];
 				int statusid = int.Parse(e.NewValues["Status"].ToString());
-				string email = e.OldValues["Email"].ToString();
-				string Serial = e.OldValues["Serial"].ToString();
+                string email = e.NewValues["Email"].ToString();
+				string Serial = e.NewValues["Serial"].ToString();
 				Debug.WriteLine(string.Format("ID={0}, statusid={1}, email:{2}, Serial:{3}", id, statusid, email, Serial));
 				try
 				{
