@@ -7,7 +7,7 @@
 			if (serialNumber.length >= 11 && serialNumber.length <= 12) {
 				doAjaxRequest();
 			} else {
-				SwitchMessage('ltWrongLength');
+				SwitchMessage('ltWrongLength', false);
 			}
 		});
 	});
@@ -26,14 +26,14 @@
 			success: function(data, textStatus) {
 				if (data.IsValid == 'True') {
 					if (data.ServiceCenter != '') {
-						SwitchMessage('ltValidSerialWithServiceCenter');
-						$('#ltServiceCenterName').html(data.ServiceCenter);
+					    SwitchMessage('ltValidSerialWithServiceCenter', data.ExtraWarranty);
+					    $('#ltServiceCenterName').html(data.ServiceCenter, data.ExtraWarranty);
 					} else {
-						SwitchMessage('ltSerialWithoutServiceCenter');
+					    SwitchMessage('ltSerialWithoutServiceCenter', data.ExtraWarranty);
 					}
 				}
 				else {
-					SwitchMessage('ltWrongSerialNumber');
+					SwitchMessage('ltWrongSerialNumber', false);
 				}
 			}
 		});
@@ -44,9 +44,12 @@
 		return { SNValue: serialNumber };
 	}
 
-	function SwitchMessage(elem_id) {
+	function SwitchMessage(elem_id, ExtraWarranty) {
 		$('.resultmess').css('display', 'none');
 		$('#' + elem_id).css('display', 'inline');
+		if (ExtraWarranty) {
+		    $('#extrawarranty').css('display', 'inline');
+		}
 	}
 
 </script>
@@ -107,6 +110,10 @@
 					<span id="ltSerialWithoutServiceCenter" style="display:none" class="resultmess">
 						Благодарим Вас за приобретение продукции Apple. Указанная модель была официально ввезена на территорию Украины, сертифицирована в соответствии с законодательством Украины* и подлежит сервисному обслуживанию через 
 						<a href="http://www.ierc.com.ua/ru/ServiceCenters.aspx">сеть Авторизованных сервисных партнеров</a>.
+					</span>
+                    <span id="extrawarranty" style="display:none" class="resultmess">
+						<br />
+                        Обращаем Ваше внимание, что на данное устройство зарегистрировано 2 (два) года гарантии. Обслуживание проводится в сервисном центре «Монблан».						
 					</span>
 					<span id="ltWrongSerialNumber" style="display:none" class="resultmess">
 						Указанная модель либо официально не поставлялась на территорию Украины, либо при введении серийного номера допущена ошибка. Для получения дополнительной информации воспользуйтесь 

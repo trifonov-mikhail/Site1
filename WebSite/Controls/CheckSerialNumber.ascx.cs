@@ -64,14 +64,29 @@ namespace Apple.Web.Controls
 			
 			if (sn != null)
 			{
+                bool _2year = false;
 				Erc.Apple.Data.Services services = new Erc.Apple.Data.Services();
 				if (sn.ServiceID != null)
 				{
 					Erc.Apple.Data.Service service = services.GetByID(sn.ServiceID.Value);
 					if (service != null)
 						response.ServiceCenter = (string.IsNullOrEmpty(service.Name)) ? "<Unknown name>" : service.Name;
-				}
+
+                    try
+                    {
+                        _2year = services.Check2yearWarranty(number);
+                        response.ExtraWarranty = _2year;
+                    }
+                    catch (Exception)
+                    {
+                        
+                    }
+                }
 				response.Message = "Serial number is valid.";
+                
+                
+
+
 			}
 			else
 			{
@@ -146,12 +161,18 @@ namespace Apple.Web.Controls
 				get { return _serviceCenter; }
 				set { _serviceCenter = value; }
 			}
+            public bool ExtraWarranty
+            {
+                get;
+                set;
+            }
 
 			public override string ToString()
 			{
 				return "{" + 
-					string.Format("{0},{1},{2}", string.Format("Message:\"{0}\"", Message),
+					string.Format("{0},{1},{2},{3}", string.Format("Message:\"{0}\"", Message),
 					string.Format("IsValid:\"{0}\"", IsValid.ToString()),
+                    string.Format("ExtraWarranty:\"{0}\"", ExtraWarranty.ToString()),
 					string.Format("ServiceCenter:\"{0}\"", ServiceCenter.ToString()) ) 
 					+ "}";
 			}

@@ -235,6 +235,25 @@ namespace Erc.Apple.Data
             return item;
         }
 
-	
+
+
+        public bool Check2yearWarranty(string number)
+        {
+            List<string> list = new List<string>();
+            // 
+            using (StoredProcedure sp = new StoredProcedure("SELECT count(Serial) FROM iPadActionSerial WHERE Status = 1"))
+            {
+                sp.command.CommandType = System.Data.CommandType.Text;
+                int cnt = (int)sp.ExecuteScalar();
+                if (cnt > 0) return true;
+            }
+            //using (StoredProcedure sp = new StoredProcedure("SELECT count(Serial) FROM MacActionSerial WHERE Status = 1"))
+            //{
+            //    sp.command.CommandType = System.Data.CommandType.Text;
+            //    int cnt = (int)sp.ExecuteScalar();
+            //    if (cnt > 0) return true;
+            //}
+            return false;
+        }
     }
 }
